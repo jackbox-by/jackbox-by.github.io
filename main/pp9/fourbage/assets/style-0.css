@@ -2919,12 +2919,12 @@ body {
 
 @font-face {
     font-family: SofiaPro-Black;
-    src: url(8c0ad940.woff2) format("woff2")
+    src: url(https://burandby.github.io/perakladifc/FuturaPT-Bold.ttf) format("ttf")
 }
 
 @font-face {
     font-family: SofiaPro-Light;
-    src: url(997bb316.woff2) format("woff2")
+    src: url(https://burandby.github.io/perakladifc/FuturaPT-Book.ttf) format("ttf")
 }
 
 :root {
