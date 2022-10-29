@@ -2022,6 +2022,11 @@ th {
     src: url(13634da8.eot);
     src: url(13634da8.eot) format("embedded-opentype"), url(fe185d11.woff2) format("woff2"), url(a26394f7.woff) format("woff"), url(e3950440.ttf) format("truetype"), url(42f60659.svg) format("svg")
 }
+@font-face {
+    font-family: PodkovaMedium;
+    src: url(Podkova-Medium.ttf);
+    src: url(Podkova-Medium.ttf) format("ttf")
+}
 
 .glyphicon {
     position: relative;
@@ -23135,7 +23140,7 @@ td,
 th,
 span,
 button {
-    font-family: Rokkitt, serif;
+    font-family: PodkovaMedium, serif;
     font-size: 28px;
     text-align: center;
     font-weight: 500;
