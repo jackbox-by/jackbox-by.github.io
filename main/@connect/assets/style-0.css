@@ -136,7 +136,7 @@
     --textSecondary: #505050;
     --textButton: #f5f7f7;
     background: var(--backgroundPrimary);
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Manrope, Arial, sans-serif;
     font-size: 10px;
     font-weight: 700;
     color: var(--textPrimary)
@@ -160,7 +160,7 @@
     border-radius: 12px;
     font-size: 18px;
     font-weight: 700;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Manrope, Arial, sans-serif;
     background-color: var(--accent);
     color: var(--textButton);
     line-height: 1.5;
@@ -405,7 +405,7 @@
 
 .slide .text[data-v-2032aa39] {
     text-align: left;
-    font-family: Helvetica, Arial, sans-serif
+    font-family: Manrope, Arial, sans-serif
 }
 
 .slide .text h3[data-v-2032aa39] {
@@ -561,7 +561,7 @@
     border: 1px solid #666;
     border-radius: 10px 10px 0 0;
     background: rgba(50, 50, 50, .5);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Manrope, sans-serif;
     font-weight: 700;
     font-size: 12px;
     transition: bottom .25s;
@@ -791,7 +791,7 @@
     --textSecondary: #505050;
     --textButton: #f5f7f7;
     background: var(--backgroundPrimary);
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Manrope, Arial, sans-serif;
     font-size: 10px;
     font-weight: 700;
     color: var(--textPrimary)
@@ -815,7 +815,7 @@
     border-radius: 12px;
     font-size: 18px;
     font-weight: 700;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Manrope, Arial, sans-serif;
     background-color: var(--accent);
     color: var(--textButton);
     line-height: 1.5;
@@ -1079,7 +1079,7 @@
     border: 1px solid #666;
     border-radius: 10px 10px 0 0;
     background: rgba(50, 50, 50, .5);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Manrope, sans-serif;
     font-weight: 700;
     font-size: 12px;
     text-align: center;
@@ -1130,7 +1130,7 @@
     --textSecondary: #505050;
     --textButton: #f5f7f7;
     background: var(--backgroundPrimary);
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Manrope, Arial, sans-serif;
     font-size: 10px;
     font-weight: 700;
     color: var(--textPrimary)
@@ -1154,7 +1154,7 @@
     border-radius: 12px;
     font-size: 18px;
     font-weight: 700;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Manrope, Arial, sans-serif;
     background-color: var(--accent);
     color: var(--textButton);
     line-height: 1.5;
@@ -1332,7 +1332,7 @@
     height: 100%;
     font-size: 14px;
     overflow-y: scroll;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Manrope, Arial, sans-serif;
     font-weight: 700;
     color: #333
 }
@@ -1428,7 +1428,7 @@ hr[data-v-d0abff79] {
     --textSecondary: #505050;
     --textButton: #f5f7f7;
     background: var(--backgroundPrimary);
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Manrope, Arial, sans-serif;
     font-size: 10px;
     font-weight: 700;
     color: var(--textPrimary)
@@ -1452,7 +1452,7 @@ hr[data-v-d0abff79] {
     border-radius: 12px;
     font-size: 18px;
     font-weight: 700;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Manrope, Arial, sans-serif;
     background-color: var(--accent);
     color: var(--textButton);
     line-height: 1.5;
@@ -1668,7 +1668,7 @@ hr[data-v-d0abff79] {
     --textSecondary: #505050;
     --textButton: #f5f7f7;
     background: var(--backgroundPrimary);
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Manrope, Arial, sans-serif;
     font-size: 10px;
     font-weight: 700;
     color: var(--textPrimary)
@@ -1692,7 +1692,7 @@ hr[data-v-d0abff79] {
     border-radius: 12px;
     font-size: 18px;
     font-weight: 700;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Manrope, Arial, sans-serif;
     background-color: var(--accent);
     color: var(--textButton);
     line-height: 1.5;
@@ -1912,7 +1912,7 @@ button.twitch[data-v-f5303469] {
     --textSecondary: #505050;
     --textButton: #f5f7f7;
     background: var(--backgroundPrimary);
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Manrope, Arial, sans-serif;
     font-size: 10px;
     font-weight: 700;
     color: var(--textPrimary)
@@ -1936,7 +1936,7 @@ button.twitch[data-v-f5303469] {
     border-radius: 12px;
     font-size: 18px;
     font-weight: 700;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Manrope, Arial, sans-serif;
     background-color: var(--accent);
     color: var(--textButton);
     line-height: 1.5;
@@ -2280,7 +2280,7 @@ button.twitch[data-v-f5303469] {
     --textSecondary: #505050;
     --textButton: #f5f7f7;
     background: var(--backgroundPrimary);
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Manrope, Arial, sans-serif;
     font-size: 10px;
     font-weight: 700;
     color: var(--textPrimary)
@@ -2304,7 +2304,7 @@ button.twitch[data-v-f5303469] {
     border-radius: 12px;
     font-size: 18px;
     font-weight: 700;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Manrope, Arial, sans-serif;
     background-color: var(--accent);
     color: var(--textButton);
     line-height: 1.5;
@@ -2676,7 +2676,7 @@ body {
     --textSecondary: #505050;
     --textButton: #f5f7f7;
     background: var(--backgroundPrimary);
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Manrope, Arial, sans-serif;
     font-size: 10px;
     font-weight: 700;
     color: var(--textPrimary)
@@ -2700,7 +2700,7 @@ body {
     border-radius: 12px;
     font-size: 18px;
     font-weight: 700;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Manrope, Arial, sans-serif;
     background-color: var(--accent);
     color: var(--textButton);
     line-height: 1.5;
@@ -2932,7 +2932,7 @@ hr[data-v-f058cb4c] {
     --textSecondary: #505050;
     --textButton: #f5f7f7;
     background: var(--backgroundPrimary);
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Manrope, Arial, sans-serif;
     font-size: 10px;
     font-weight: 700;
     color: var(--textPrimary)
@@ -2956,7 +2956,7 @@ hr[data-v-f058cb4c] {
     border-radius: 12px;
     font-size: 18px;
     font-weight: 700;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Manrope, Arial, sans-serif;
     background-color: var(--accent);
     color: var(--textButton);
     line-height: 1.5;
@@ -3239,7 +3239,7 @@ button.audience.connecting:before {
     --textSecondary: #505050;
     --textButton: #f5f7f7;
     background: var(--backgroundPrimary);
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Manrope, Arial, sans-serif;
     font-size: 10px;
     font-weight: 700;
     color: var(--textPrimary)
@@ -3263,7 +3263,7 @@ button.audience.connecting:before {
     border-radius: 12px;
     font-size: 18px;
     font-weight: 700;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Manrope, Arial, sans-serif;
     background-color: var(--accent);
     color: var(--textButton);
     line-height: 1.5;
@@ -3834,7 +3834,7 @@ button.audience.connecting:before {
     --textSecondary: #505050;
     --textButton: #f5f7f7;
     background: var(--backgroundPrimary);
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Manrope, Arial, sans-serif;
     font-size: 10px;
     font-weight: 700;
     color: var(--textPrimary)
@@ -3858,7 +3858,7 @@ button.audience.connecting:before {
     border-radius: 12px;
     font-size: 18px;
     font-weight: 700;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Manrope, Arial, sans-serif;
     background-color: var(--accent);
     color: var(--textButton);
     line-height: 1.5;
@@ -4228,7 +4228,7 @@ button.audience.connecting:before {
     --textSecondary: #505050;
     --textButton: #f5f7f7;
     background: var(--backgroundPrimary);
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Manrope, Arial, sans-serif;
     font-size: 10px;
     font-weight: 700;
     color: var(--textPrimary)
@@ -4252,7 +4252,7 @@ button.audience.connecting:before {
     border-radius: 12px;
     font-size: 18px;
     font-weight: 700;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Manrope, Arial, sans-serif;
     background-color: var(--accent);
     color: var(--textButton);
     line-height: 1.5;
@@ -4531,7 +4531,7 @@ button.audience.connecting:before {
     --textSecondary: #505050;
     --textButton: #f5f7f7;
     background: var(--backgroundPrimary);
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Manrope, Arial, sans-serif;
     font-size: 10px;
     font-weight: 700;
     color: var(--textPrimary)
@@ -4555,7 +4555,7 @@ button.audience.connecting:before {
     border-radius: 12px;
     font-size: 18px;
     font-weight: 700;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Manrope, Arial, sans-serif;
     background-color: var(--accent);
     color: var(--textButton);
     line-height: 1.5;
@@ -4872,7 +4872,7 @@ li.appearance svg .celestial[data-v-727b0bbe] {
     --textSecondary: #505050;
     --textButton: #f5f7f7;
     background: var(--backgroundPrimary);
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Manrope, Arial, sans-serif;
     font-size: 10px;
     font-weight: 700;
     color: var(--textPrimary)
@@ -4896,7 +4896,7 @@ li.appearance svg .celestial[data-v-727b0bbe] {
     border-radius: 12px;
     font-size: 18px;
     font-weight: 700;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Manrope, Arial, sans-serif;
     background-color: var(--accent);
     color: var(--textButton);
     line-height: 1.5;
@@ -5148,7 +5148,7 @@ li.appearance svg .celestial[data-v-727b0bbe] {
     --textSecondary: #505050;
     --textButton: #f5f7f7;
     background: var(--backgroundPrimary);
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Manrope, Arial, sans-serif;
     font-size: 10px;
     font-weight: 700;
     color: var(--textPrimary)
@@ -5172,7 +5172,7 @@ li.appearance svg .celestial[data-v-727b0bbe] {
     border-radius: 12px;
     font-size: 18px;
     font-weight: 700;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Manrope, Arial, sans-serif;
     background-color: var(--accent);
     color: var(--textButton);
     line-height: 1.5;
@@ -5548,7 +5548,7 @@ li.appearance svg .celestial[data-v-727b0bbe] {
     --textSecondary: #505050;
     --textButton: #f5f7f7;
     background: var(--backgroundPrimary);
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Manrope, Arial, sans-serif;
     font-size: 10px;
     font-weight: 700;
     color: var(--textPrimary)
@@ -5572,7 +5572,7 @@ li.appearance svg .celestial[data-v-727b0bbe] {
     border-radius: 12px;
     font-size: 18px;
     font-weight: 700;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Manrope, Arial, sans-serif;
     background-color: var(--accent);
     color: var(--textButton);
     line-height: 1.5;
@@ -5849,7 +5849,7 @@ li.appearance svg .celestial[data-v-727b0bbe] {
     --textSecondary: #505050;
     --textButton: #f5f7f7;
     background: var(--backgroundPrimary);
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Manrope, Arial, sans-serif;
     font-size: 10px;
     font-weight: 700;
     color: var(--textPrimary)
@@ -5873,7 +5873,7 @@ li.appearance svg .celestial[data-v-727b0bbe] {
     border-radius: 12px;
     font-size: 18px;
     font-weight: 700;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Manrope, Arial, sans-serif;
     background-color: var(--accent);
     color: var(--textButton);
     line-height: 1.5;
@@ -6208,7 +6208,7 @@ li.appearance svg .celestial[data-v-727b0bbe] {
     --textSecondary: #505050;
     --textButton: #f5f7f7;
     background: var(--backgroundPrimary);
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Manrope, Arial, sans-serif;
     font-size: 10px;
     font-weight: 700;
     color: var(--textPrimary)
@@ -6232,7 +6232,7 @@ li.appearance svg .celestial[data-v-727b0bbe] {
     border-radius: 12px;
     font-size: 18px;
     font-weight: 700;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Manrope, Arial, sans-serif;
     background-color: var(--accent);
     color: var(--textButton);
     line-height: 1.5;
