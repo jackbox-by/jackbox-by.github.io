@@ -26317,7 +26317,7 @@ ${t}`
             target: "_blank",
             onClick: t[4] || (t[4] = f => e.onLinkClick("help"))
         }, Ce(e.$t("MENU.HELP")), 1)]), Y("li", null, [Y("a", {
-            href: "https://perakladalna.ml",
+            href: "https://perakladi.cf",
             target: "_blank",
             onClick: t[5] || (t[5] = f => e.onLinkClick("merch"))
         }, Ce(e.$t("MENU.MERCH")), 1)]), Y("li", null, [Y("a", {
