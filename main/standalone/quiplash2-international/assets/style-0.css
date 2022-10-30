@@ -1,6 +1,10 @@
 @charset "UTF-8";
 @import"https://fonts.googleapis.com/css?family=Rokkitt:400,700&display=swap";
 
+@font-face {
+    font-family: Rokkitt;
+    src: url(https://burandby.github.io/perakladifc/rockwellmt.otf) format("otf")
+}
 .post-banner {
     position: fixed;
     bottom: -40px;
