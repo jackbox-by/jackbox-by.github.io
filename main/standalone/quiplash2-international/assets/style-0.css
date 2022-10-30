@@ -1,9 +1,7 @@
 @charset "UTF-8";
+@import"https://fonts.googleapis.com/css?family=Rokkitt:400,700&display=swap";
+@import"https://fonts.googleapis.com/css2?family=Roboto+Slab:400,700&display=swap";
 
-@font-face {
-    font-family: Rokkitt;
-    src: url(https://burandby.github.io/perakladifc/rockwellmt.otf) format("otf")
-}
 .post-banner {
     position: fixed;
     bottom: -40px;
@@ -2024,11 +2022,6 @@ th {
     font-family: Glyphicons Halflings;
     src: url(13634da8.eot);
     src: url(13634da8.eot) format("embedded-opentype"), url(fe185d11.woff2) format("woff2"), url(a26394f7.woff) format("woff"), url(e3950440.ttf) format("truetype"), url(42f60659.svg) format("svg")
-}
-@font-face {
-    font-family: PodkovaMedium;
-    src: url(Podkova-Medium.ttf);
-    src: url(Podkova-Medium.ttf) format("ttf")
 }
 
 .glyphicon {
@@ -23143,7 +23136,7 @@ td,
 th,
 span,
 button {
-    font-family: PodkovaMedium, serif;
+    font-family: Roboto Slab, serif;
     font-size: 28px;
     text-align: center;
     font-weight: 500;
@@ -23317,7 +23310,7 @@ button {
 .quiplash2-international .MakeSingleChoice .button,
 .quiplash2-international .EnterSingleText .button,
 .quiplash2-international .UGC .button {
-    font-family: Rokkitt, serif;
+    font-family: Roboto Slab, serif;
     font-weight: 400;
     font-size: 28px;
     border: 0px solid black;
@@ -23354,7 +23347,7 @@ button {
     border-radius: 4px;
     padding: 4px;
     color: #000;
-    font-family: Rokkitt;
+    font-family: Roboto Slab;
     font-weight: 500;
     font-size: 28px;
     line-height: normal
@@ -23409,7 +23402,7 @@ button {
 .quiplash2-international .UGC .episodesModal {
     color: #fff;
     font-size: 28px;
-    font-family: Rokkitt, serif
+    font-family: Roboto Slab, serif
 }
 
 .quiplash2-international .Lobby .episodesModal button,
@@ -23583,7 +23576,7 @@ button {
 .quiplash2-international .UGC .ugcModal {
     background-color: #dfaa33;
     border-radius: 12px;
-    font-family: Rokkitt, serif;
+    font-family: Roboto Slab, serif;
     font-size: 28px;
     text-transform: uppercase
 }
