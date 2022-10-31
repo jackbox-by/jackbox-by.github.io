@@ -23136,7 +23136,7 @@ td,
 th,
 span,
 button {
-    font-family: Roboto Slab, serif;
+    font-family: 'Roboto Slab', serif;
     font-size: 28px;
     text-align: center;
     font-weight: 500;
@@ -23310,7 +23310,7 @@ button {
 .quiplash2-international .MakeSingleChoice .button,
 .quiplash2-international .EnterSingleText .button,
 .quiplash2-international .UGC .button {
-    font-family: Roboto Slab, serif;
+    font-family: 'Roboto Slab', serif;
     font-weight: 400;
     font-size: 28px;
     border: 0px solid black;
@@ -23347,7 +23347,7 @@ button {
     border-radius: 4px;
     padding: 4px;
     color: #000;
-    font-family: Roboto Slab;
+    font-family: 'Roboto Slab';
     font-weight: 500;
     font-size: 28px;
     line-height: normal
@@ -23402,7 +23402,7 @@ button {
 .quiplash2-international .UGC .episodesModal {
     color: #fff;
     font-size: 28px;
-    font-family: Roboto Slab, serif
+    font-family: 'Roboto Slab', serif
 }
 
 .quiplash2-international .Lobby .episodesModal button,
@@ -23576,7 +23576,7 @@ button {
 .quiplash2-international .UGC .ugcModal {
     background-color: #dfaa33;
     border-radius: 12px;
-    font-family: Roboto Slab, serif;
+    font-family: 'Roboto Slab', serif;
     font-size: 28px;
     text-transform: uppercase
 }
