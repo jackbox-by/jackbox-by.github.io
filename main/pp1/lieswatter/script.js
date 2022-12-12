@@ -16888,24 +16888,24 @@ const VC = Et.View.extend({
             strings: {
                 wait: "Sit back and relax!",
                 vip_waiting: "Waiting for all players to join",
-                vip_canStart: "Press this button when everybody has joined",
-                vip_cancel: "Press this button to cancel game start",
-                vip_postgame: "What would you like to do now?",
+                vip_canStart: "Націсніце гэтую кнопку калі ўсе далучацца",
+                vip_cancel: "Націсніце гэтую кнопку каб адмяніць пачатак гульні",
+                vip_postgame: "Што робім далей?",
                 vip_episodes_menu: "Episodes Menu",
                 vip_episodes_unload: "Unload Episode",
                 vip_episodes_report: "Report Episode",
                 vip_episodes_warning: "Warning: user generated content is not rated",
                 vip_episodes_load: "Load an episode by id:",
                 vip_episodes_select: "Or select an episode:",
-                vip_episodes_back: "Back",
-                vip_episodes_submit: "SUBMIT",
+                vip_episodes_back: "Назад",
+                vip_episodes_submit: "АДПРАВІЦЬ",
                 vip_episodes_view_author: "View Author",
-                button_start: "Everybody's In",
+                button_start: "УСЕ ТУТ",
                 button_cancel: "Cancel",
                 button_changename: "Change Name",
-                button_sameplayers: "Same Players",
-                button_newplayers: "New Players",
-                prompt_entername: "Enter your name",
+                button_sameplayers: "Гэтыя Гульцы",
+                button_newplayers: "Новыя Гульцы",
+                prompt_entername: "Увядзіце імя",
                 prompt_choosecharacter: "Select your character",
                 button_censorOptions: "Censor Options",
                 censor_prompt: ""
@@ -21048,15 +21048,15 @@ const $x = Et.View.extend({
 					<table style="margin-left:auto; margin-right:auto;">
 					<tr>
 						<td style="padding:10px; width=80px;">
-							<div style="text-align:center; font-family:'Ubuntu', sans-serif; color:white;"><span>RANK</span><br /></div>
+							<div style="text-align:center; font-family:'Ubuntu', sans-serif; color:white;"><span>РАНГ</span><br /></div>
 							<div style="text-align:center;"><span id="lieswatter-rank" class="ls-rank-button">0</span></div>
 						</td>
 						<td style="padding:10px; width=160px;">
-							<div style="text-align:center; font-family:'Ubuntu', sans-serif; color:white;"><span>SCORE</span><br /></div>
+							<div style="text-align:center; font-family:'Ubuntu', sans-serif; color:white;"><span>РАХУНАК</span><br /></div>
 							<div style="text-align:center;"><span id="lieswatter-score" class="ls-score-button">0</span></div>
 						</td>
 						<td style="padding:10px; width=80px;">
-							<div style="text-align:center; font-family:'Ubuntu', sans-serif; color:white;"><span>STREAK</span><br /></div>
+							<div style="text-align:center; font-family:'Ubuntu', sans-serif; color:white;"><span>ПАДРЯД</span><br /></div>
 							<div style="text-align:center";><span id="lieswatter-combo" class="ls-rank-button">0</span></div>
 						</td>
 					</tr>
@@ -21078,7 +21078,7 @@ const $x = Et.View.extend({
 		</div>
 
 		<div class="pt-page-off state-nothing lieswatter-page" style="background:#515151;" >
-			<br /><span>ANSWER ENTERED!<br /><br />WAITING FOR OTHER PLAYERS.</span><br />
+			<br /><span>АДКАЗ УВЕДЗЕН!<br /><br />ЧАКАЕМ ІНШЫХ ГУЛЬЦОЎ.</span><br />
 		</div>
 	</div>
 </div>
@@ -21106,7 +21106,7 @@ const zx = VC.extend({
         else if (i && i.split("_")[0] === "Lobby") {
             this.allowSendAnswer = !0, this.hideLobbyButtons();
             const a = i.split("_")[1];
-            a === "CanStart" ? (ye("#lieswatter-lobby-text").html("Press this button when everybody has joined"), ye("#lieswatter-startgame").show()) : a === "PostGame" && (ye("#lieswatter-lobby-text").html("What do you want to do?"), ye(".lieswatter-endbuttons").show()), this.showScreen(".state-lobby")
+            a === "CanStart" ? (ye("#lieswatter-lobby-text").html("Націсніце гэтую кнопку, калі ўсе далучацца"), ye("#lieswatter-startgame").show()) : a === "PostGame" && (ye("#lieswatter-lobby-text").html("Што робім далей?"), ye(".lieswatter-endbuttons").show()), this.showScreen(".state-lobby")
         } else if (i === "Gameplay_Round" && n === i) {
             if (t.score === void 0) return;
             ye("#lieswatter-score").html(t.score.score), ye("#lieswatter-combo").html(t.score.combo), Number(t.score.place) >= 0 ? ye("#lieswatter-rank").html(t.score.place + 1) : ye("#lieswatter-rank").html("-"), t.statement !== void 0 && t.statement.text !== void 0 && (ye("#lieswatter-category").html(t.statement.category), ye("#lieswatter-statement").html(t.statement.text)), t.answer !== void 0 && t.answer >= 0 || t.statement && t.statement.text === this.lastQuestion ? (this.showScreen(".state-nothing"), this.lastQuestion = t.statement.text) : (this.allowSendAnswer = !0, this.showScreen(".state-answer"))
