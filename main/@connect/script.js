@@ -11205,7 +11205,7 @@ var Ere = nL((Tre, Sw) => {
             isPublic: !0,
             directory: "pp1/wordspud"
         }, {
-            name: "Lie Swatter",
+            name: "[BETA] Мухі Ўрухі",
             tag: "lieswatter",
             wrapper: "marionette",
             isPublic: !0,
