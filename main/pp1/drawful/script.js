@@ -16886,29 +16886,29 @@ const lc = Et.View.extend({
             formattedActiveContentId: null,
             isLocal: !1,
             strings: {
-                wait: "Sit back and relax!",
-                vip_waiting: "Waiting for all players to join",
-                vip_canStart: "Press this button when everybody has joined",
-                vip_cancel: "Press this button to cancel game start",
-                vip_postgame: "What would you like to do now?",
-                vip_episodes_menu: "Episodes Menu",
-                vip_episodes_unload: "Unload Episode",
-                vip_episodes_report: "Report Episode",
-                vip_episodes_warning: "Warning: user generated content is not rated",
-                vip_episodes_load: "Load an episode by id:",
-                vip_episodes_select: "Or select an episode:",
-                vip_episodes_back: "Back",
-                vip_episodes_submit: "SUBMIT",
-                vip_episodes_view_author: "View Author",
-                button_start: "Everybody's In",
-                button_cancel: "Cancel",
-                button_changename: "Change Name",
-                button_sameplayers: "Same Players",
-                button_newplayers: "New Players",
-                prompt_entername: "Enter your name",
-                prompt_choosecharacter: "Select your character",
-                button_censorOptions: "Censor Options",
-                censor_prompt: ""
+                 wait: "Сядзьце і расслабцеся!",
+                 vip_waiting: "Чаканне далучэння ўсіх гульцоў",
+                 vip_canStart: "Націсніце гэтую кнопку, калі ўсе далучацца",
+                 vip_cancel: "Націсніце гэтую кнопку, каб адмяніць пачатак гульні",
+                 vip_postgame: "Што б ты хацеў зрабіць цяпер?",
+                 vip_episodes_menu: "Меню эпізодаў",
+                 vip_episodes_unload: "Выгрузіць эпізод",
+                 vip_episodes_report: "Паведаміць пра эпізод",
+                 vip_episodes_warning: "Папярэджанне: змесціва, створанае карыстальнікамі, не ацэньваецца",
+                 vip_episodes_load: "Загрузіць серыю па id:",
+                 vip_episodes_select: "Або выберыце эпізод:",
+                 vip_episodes_back: "Назад",
+                 vip_episodes_submit: "АДПРАВІЦЬ",
+                 vip_episodes_view_author: "Праглядзець аўтара",
+                 button_start: "Усе прымаюць",
+                 button_cancel: "Адмена",
+                 button_changename: "Змяніць назву",
+                 button_sameplayers: "Тыя самыя гульцы",
+                 button_newplayers: "Новыя гульцы",
+                 prompt_entername: "Увядзіце сваё імя",
+                 prompt_choosecharacter: "Выберыце свайго персанажа",
+                 button_censorOptions: "Параметры цэнзара",
+                 censor_prompt: ""
             }
         }
     }),
@@ -21078,10 +21078,10 @@ const jx = Et.View.extend({
 			<div class="container">\r
 				<br /><span id="drawful-lobby-text" class='drawful-text'></span><br />\r
 				<form class="pure-form">					\r
-					<button type="button" id="drawful-startgame" class="button-drawful button-xlarge pure-button pure-input-1">everybody's in</button>\r
-					<button type="button" id="drawful-stopcountdown" class="button-drawful button-xlarge pure-button pure-input-1">cancel</button>\r
-					<button type="button" id="drawful-sameplayers" class="button-drawful button-xlarge pure-button pure-input-1 drawful-endbuttons">same players</button>\r
-					<button type="button" id="drawful-newplayers" class="button-drawful button-xlarge pure-button pure-input-1 drawful-endbuttons">new players</button>	\r
+					<button type="button" id="drawful-startgame" class="button-drawful button-xlarge pure-button pure-input-1">усе тут</button>\r
+					<button type="button" id="drawful-stopcountdown" class="button-drawful button-xlarge pure-button pure-input-1">адмена</button>\r
+					<button type="button" id="drawful-sameplayers" class="button-drawful button-xlarge pure-button pure-input-1 drawful-endbuttons">гэтыя гульцы</button>\r
+					<button type="button" id="drawful-newplayers" class="button-drawful button-xlarge pure-button pure-input-1 drawful-endbuttons">новыя гульцы</button>	\r
 				</form>\r
 			</div>\r
 		</div>\r
@@ -21101,13 +21101,13 @@ const jx = Et.View.extend({
 		<div class="pt-page-off state-drawing-sent drawful-page">\r
 			<div class="container">\r
 				<br /><span id="drawful-drawing-received" class='drawful-text'></span><br />\r
-				<span class='drawful-text'>thanks for your drawing</span><br />\r
+				<span class='drawful-text'>дзякуй за ваш малюнак</span><br />\r
 			</div>\r
 		</div>\r
 \r
 		<div class="pt-page-off state-drawing-done drawful-page">\r
 			<div class="container">\r
-				<br /><span class='drawful-text'>drawing time is over!</span><br />\r
+				<br /><span class='drawful-text'>час скончыўся!</span><br />\r
 			</div>\r
 		</div>		\r
 \r
@@ -21119,7 +21119,7 @@ const jx = Et.View.extend({
 				<div id="drawful-submit-alert" class="alert alert-info">Alert message goes here</div>\r
 				<form class="pure-form" id="drawful-enterlie-field">\r
 					<div class="pure-u-1">\r
-						<input id="drawful-lie-input" name="drawful-lie" class="pure-input-1 jbg-input" type="text" maxlength="45" placeholder="enter a title" autocapitalize="off" autocorrect="off" autocomplete="off">\r
+						<input id="drawful-lie-input" name="drawful-lie" class="pure-input-1 jbg-input" type="text" maxlength="45" placeholder="увядзіце назву" autocapitalize="off" autocorrect="off" autocomplete="off">\r
 					</div>\r
 					<div class="pure-u-1 right">\r
 						<button type="submit" id="drawful-submitlie" class="button-drawful button-xlarge pure-button right"><i class="fas fa-paper-plane"></i>&nbsp;&nbsp;send</button>\r
@@ -21150,13 +21150,13 @@ const jx = Et.View.extend({
 \r
 		<div class="pt-page-off state-liereceived drawful-page">\r
 			<div class="container">\r
-				<br /><span class='drawful-text'>title entered!<br />waiting for other players.</span><br />\r
+				<br /><span class='drawful-text'>title entered!<br />чакаем іншых гульцоў.</span><br />\r
 			</div>\r
 		</div>\r
 \r
 		<div class="pt-page-off state-lyingdone drawful-page">\r
 			<div class="container">\r
-				<br /><span class='drawful-text'>done!</span><br />\r
+				<br /><span class='drawful-text'>гатова!</span><br />\r
 			</div>\r
 		</div>		\r
 \r
@@ -21169,13 +21169,13 @@ const jx = Et.View.extend({
 		<div class="pt-page-off state-draw drawful-page">\r
 			<!-- <div class="container"> -->\r
 				<span id="drawful-prompt" class='prompt drawful-text'>please draw:</span><br />\r
-				<span id="drawful-instructions" class='instructions drawful-text'>a picture of yourself!</span><br />\r
+				<span id="drawful-instructions" class='instructions drawful-text'>ff!</span><br />\r
 \r
 				<canvas class="sketchpad" width='240' height='300' style='background-color:white;'>\r
-					Sorry, your browser is not supported.\r
+					Прабачце, ваш браузер не падтрымліваецца.\r
 				</canvas>\r
 				<form class="pure-form container">\r
-					<button type="submit" id="drawful-submitdrawing" class="submit-drawing button-drawful button-large pure-button pure-input-1" style="margin-top: 0px;"><i class="fas fa-paper-plane"></i>&nbsp;&nbsp;send</button>\r
+					<button type="submit" id="drawful-submitdrawing" class="submit-drawing button-drawful button-large pure-button pure-input-1" style="margin-top: 0px;"><i class="fas fa-paper-plane"></i>&nbsp;&nbsp;адправіць</button>\r
 					<div id="drawful-submitdrawing-loading" style="display:none;" class="button-drawful-loading"></div>\r
 				</form>				\r
 			<!-- </div> -->\r
@@ -21186,8 +21186,7 @@ const jx = Et.View.extend({
 const Hx = lc.extend({
     template: at.template(zx),
     lacksAudience: !0,
-    authorMessages: ["you drew this. think about what you've done.", "you drew this. relax.", "you drew this. wait for everyone to figure out what you did.", "you drew this. there's no taking that back.", "you drew this. take a breather.", "you drew this. you are all-powerful.", "you drew this. how do you feel about it?", "you drew this. this is your fault.", "you drew this. it's... good?", "you drew this. all hail you!", "you drew this. let's see what happens."],
-    events: {
+    authorMessages: ["ты намаляваў гэта. падумай аб тым, што ты зрабіў.", "ты намаляваў гэта. расслабся.", "ты намаляваў гэта. пачакай, пакуль усе зразумеюць, што ты зрабіў.", "ты намаляваў гэта. няма чаго браць тую спіну.", "ты намаляваў гэта. перадыхні.", "ты намаляваў гэта. ты ўсемагутны.", "ты намаляваў гэта. як ты да гэтага ставішся?", "ты намаляваў гэта. гэта ты вінаваты.", "ты намаляваў гэта. гэта... добра?", "ты намаляваў гэта. вітаю цябе!", "ты намаляваў гэта. паглядзім, што будзе."],    events: {
         "click #drawful-startgame": "startGame",
         "click #drawful-stopcountdown": "stopCountdown",
         "click #drawful-sameplayers": "newGameSamePlayers",
@@ -21216,7 +21215,7 @@ const Hx = lc.extend({
             return
         }
         if (n === "GameLocked") {
-            kt.show(Error("Game is in progress. Please wait for a new game to start."), {
+            kt.show(Error("Гульня ідзе. Пачакайце, калі пачнецца новая гульня."), {
                 willClose: () => {
                     window.location.reload(!0)
                 }
@@ -21228,7 +21227,7 @@ const Hx = lc.extend({
                 this.onResize();
                 return
             }
-            this.enableLoadingButton("#drawful-submitdrawing", !0), this.showScreen(".state-draw"), fe(".drawful .state-draw .instructions").html("a picture of yourself!");
+            this.enableLoadingButton("#drawful-submitdrawing", !0), this.showScreen(".state-draw"), fe(".drawful .state-draw .instructions").html("выява сябе!");
             const f = this.$(".drawful .sketchpad")[0],
                 m = f.getContext("2d"),
                 _ = fe("#player").outerHeight(!0) + fe("#drawful-instructions").outerHeight(!0) + fe("#drawful-prompt").outerHeight(!0) + fe("#drawful-submitdrawing").outerHeight(!0) + 10;
@@ -21238,7 +21237,7 @@ const Hx = lc.extend({
         if (this.joiningInterfaceIsUp = !1, i && i === "Lobby" && n === i) {
             this.currentCanvas = void 0, this.hideLobbyButtons();
             const f = e.lobbyState;
-            f === "WaitingForMore" ? fe("#drawful-lobby-text").html("waiting for all players to join") : f === "CanStart" ? (fe("#drawful-lobby-text").html("press this button when everybody has joined"), fe("#drawful-startgame").show()) : f === "Countdown" ? (fe("#drawful-lobby-text").html("press this button to cancel game start"), fe("#drawful-stopcountdown").show()) : f === "PostGame" && (fe("#drawful-lobby-text").html("what do you want to do?"), fe(".drawful-endbuttons").show()), this.showScreen(".state-lobby")
+            f === "WaitingForMore" ? fe("#drawful-lobby-text").html("waiting for all players to join") : f === "CanStart" ? (fe("#drawful-lobby-text").html("націсніце гэтую кнопку, калі ўсе далучыліся"), fe("#drawful-startgame").show()) : f === "Countdown" ? (fe("#drawful-lobby-text").html("націсніце кнопку каб адмяніць пачатак гульні"), fe("#drawful-stopcountdown").show()) : f === "PostGame" && (fe("#drawful-lobby-text").html("што ты хочаш зрабіць?"), fe(".drawful-endbuttons").show()), this.showScreen(".state-lobby")
         } else if (i === "Gameplay_Logo") this.showScreen(".state-nothing");
         else if (i === "Gameplay_Round") fe(".round-text").html(`ROUND ${e.round}`), this.showScreen(".state-round");
         else if (i === "Gameplay_DrawingTime" && n === "Gameplay_DrawingTime")
@@ -21254,14 +21253,14 @@ const Hx = lc.extend({
         else if (i === "Gameplay_EnterLie" && n === "Gameplay_EnterLie") {
             if (this.activeScreen !== ".state-enterlie" && (t.isAuthor ? (fe("#drawful-lie-input").hide(), fe("#drawful-enterlie-field").hide(), fe("#drawful-submit-alert").hide(), fe("#drawful-submitlie").hide(), fe(".state-enterlie .author-text").html(this.authorMessages[Math.floor(Math.random() * this.authorMessages.length)])) : (fe(".state-enterlie .author-text").html(""), fe("#drawful-lie-input").val(""), fe("#drawful-lie-input").show(), fe("#drawful-enterlie-field").show(), fe("#drawful-submitlie").show(), fe("#drawful-submit-alert").hide())), t.showError) {
                 const f = fe("#drawful-submit-alert");
-                fe("#drawful-submit-alert").html("you entered the correct title! enter a fake one!"), f.addClass("alert-info"), f.removeClass("alert-danger"), f.show()
+                fe("#drawful-submit-alert").html("вы ўвялі правільную назву! увядзіце фальшывы!"), f.addClass("alert-info"), f.removeClass("alert-danger"), f.show()
             }
             this.enableLoadingButton("#drawful-submitlie", !0), this.showScreen(".state-enterlie")
         } else if (n === "Gameplay_LieReceived") this.showScreen(".state-liereceived");
         else if (i === "Gameplay_LyingDone") this.showScreen(".state-lyingdone");
         else if (i === "Gameplay_ChooseLie" && n === "Gameplay_ChooseLie")
             if (t.choosingDone || t.chosen != null || t.isAuthor) {
-                t.isAuthor ? fe("#chooselikes-choice").html("") : fe("#chooselikes-choice").html(t.chosen ? `you chose: ${t.chosen}` : "you didn't make a choice"), fe("#chooselikes-text").html("award bonus likes");
+                t.isAuthor ? fe("#chooselikes-choice").html("") : fe("#chooselikes-choice").html(t.chosen ? `you chose: ${t.chosen}` : "ты не зрабіў выбару"), fe("#chooselikes-text").html("прэмія бонус лайкі");
                 const m = "pure-input-1 drawful-like-button button-large pure-button";
                 let _ = "";
                 for (a = 0; a < t.choices.length; a++) {
@@ -21296,7 +21295,7 @@ const Hx = lc.extend({
         e ? (fe(t).show(), fe(`${t}-loading`).hide()) : (fe(t).hide(), fe(`${t}-loading`).show())
     },
     submitDrawing() {
-        if (this.currentCanvas.isClean) return alert("You have to draw something!"), !1;
+        if (this.currentCanvas.isClean) return alert("Вы павінны нешта намаляваць!"), !1;
         this.enableLoadingButton("#drawful-submitdrawing", !1);
         const t = this.joiningInterfaceIsUp ? {
             setPlayerPicture: !0,
@@ -21310,7 +21309,7 @@ const Hx = lc.extend({
         let t = this.sanitize(fe("#drawful-lie-input").val()).toUpperCase();
         if (t = t.replace(/\s\s+/g, " ").trim(), t.length === 0) {
             const e = fe("#drawful-submit-alert");
-            return fe("#drawful-submit-alert").html("you can't enter nothing!"), e.removeClass("alert-info"), e.addClass("alert-danger"), e.show(), !1
+            return fe("#drawful-submit-alert").html("вы не можаце нічога ўвесці!"), e.removeClass("alert-info"), e.addClass("alert-danger"), e.show(), !1
         }
         return this.enableLoadingButton("#drawful-submitlie", !1), this.client.send("SendMessageToRoomOwner", {
             lieEntered: t,
@@ -21349,7 +21348,7 @@ const Hx = lc.extend({
         }), !1
     },
     sanitize(t) {
-        return t.replace(/[^A-Z0-9\u00A1\u0020-\u002F\u00BF-\u00FF!?*$+\-’'_ .,]/gi, "").replace(/'/g, "\u2019").trim()
+        return t.replace(/[^A-Z\u0456\u0406\u045E\u040E\u0410-\u042F\u0430-\u044F0-9\u00A1\u0020-\u002F\u00BF-\u00FF!?*$+\-’'_ .,]/gi, "").replace(/'/g, "\u2019").trim()
     }
 });
 Fx({
