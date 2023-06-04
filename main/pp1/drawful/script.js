@@ -21260,7 +21260,7 @@ const Hx = lc.extend({
         else if (i === "Gameplay_LyingDone") this.showScreen(".state-lyingdone");
         else if (i === "Gameplay_ChooseLie" && n === "Gameplay_ChooseLie")
             if (t.choosingDone || t.chosen != null || t.isAuthor) {
-                t.isAuthor ? fe("#chooselikes-choice").html("") : fe("#chooselikes-choice").html(t.chosen ? `you chose: ${t.chosen}` : "ты не зрабіў выбару"), fe("#chooselikes-text").html("прэмія бонус лайкі");
+                t.isAuthor ? fe("#chooselikes-choice").html("") : fe("#chooselikes-choice").html(t.chosen ? `ты выбраў: ${t.chosen}` : "ты не зрабіў выбару"), fe("#chooselikes-text").html("падары бонусныя лайкі");
                 const m = "pure-input-1 drawful-like-button button-large pure-button";
                 let _ = "";
                 for (a = 0; a < t.choices.length; a++) {
