@@ -11522,7 +11522,7 @@ var Ere = nL((Tre, Sw) => {
             features: ["moderation", "kicking"],
             categoryId: "RangeGameGame"
         }, {
-            name: "Quixort",
+            name: "[BETA] Хуткасорт",
             tag: "lineup",
             wrapper: "vue",
             isPublic: !0,
