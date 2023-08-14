@@ -25301,28 +25301,28 @@ ${t}`
             })
         },
         Dte = {
-            LEFT: "left",
-            RIGHT: "right",
+            LEFT: "лева",
+            RIGHT: "права",
             SLAM: "slam",
-            YOU_UP_NEXT: "you are[line]up next[/line]",
-            IS_UP_NEXT: "up next[line]{name}[/line]",
-            OTHER_TEAM: "up now[line]{team}[/line]",
-            WAIT: "wait",
-            UP_NEXT: "up next",
-            QUIXORTING: "quixorting",
-            FINAL: "final",
-            ATTENTION: "! whoa there !",
-            ATTENTION_MESSAGE: "you are at capacity and must trash a block before placing another one"
+            YOU_UP_NEXT: "ты[line]наступны[/line]",
+            IS_UP_NEXT: "наступны: [line]{name}[/line]",
+            OTHER_TEAM: "сарціруе: [line]{team}[/line]",
+            WAIT: "чакай",
+            UP_NEXT: "наступны",
+            QUIXORTING: "хуткасарціроўка",
+            FINAL: "фінал",
+            ATTENTION: "! пастой-ка !",
+            ATTENTION_MESSAGE: "вы на максімуме і павінны выдаліць блок, перш чым размяшчаць іншы"
         },
         Mte = {
-            GET_READY: "GET READY",
-            TAP_TO_TRASH: "TAP TO TRASH",
-            WAIT: "WAIT"
+            GET_READY: "ГАТОЎ?",
+            TAP_TO_TRASH: "ЦІСНІ КАБ ВЫКІНУЦЬ",
+            WAIT: "ЧАКАЙ"
         },
         Fte = {
-            CHOOSE_AVATAR: "Choose your avatar",
-            CHOOSE_TEAM: "Choose your team",
-            CHOOSE_TEAM_AUDIENCE: "Choose the team you would like to join"
+            CHOOSE_AVATAR: "Выберыце аватар",
+            CHOOSE_TEAM: "Выберыце каманду",
+            CHOOSE_TEAM_AUDIENCE: "Выберыце каманду, да якой вы хочаце далучыцца"
         },
         Bte = {
             FALLING: Dte,
