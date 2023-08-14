@@ -25303,7 +25303,7 @@ ${t}`
         Dte = {
             LEFT: "лева",
             RIGHT: "права",
-            SLAM: "slam",
+            SLAM: "кінуць",
             YOU_UP_NEXT: "ты[line]наступны[/line]",
             IS_UP_NEXT: "наступны: [line]{name}[/line]",
             OTHER_TEAM: "сарціруе: [line]{team}[/line]",
