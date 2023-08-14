@@ -10684,23 +10684,23 @@ ${n.message}`,
         },
         M5 = "LOADING",
         F5 = {
-            JOINED_COUNT: "x | {count} of {maxPlayers} players joined | {count} of {maxPlayers} players joined",
-            PLAYERS_NEEDED: "x | {count} player needed to start | {count} players needed to start",
-            WAITING_FOR_VIP: "Waiting for {name} to start the game",
-            WAITING_FOR_GAMEPAD: "Waiting for the game to start",
-            GAME_STARTING: "Game is starting",
-            BUTTON_START: "Press to Start",
-            BUTTON_CANCEL: "Press to Cancel"
+            JOINED_COUNT: "x | {count} з {maxPlayers} гульцоў далучылася | {count} з {maxPlayers} гульцоў далучылася",
+            PLAYERS_NEEDED: "x | {count} гульцоў неабходна для пачатку | {count} гульцоў неабходна для пачатку",
+            WAITING_FOR_VIP: "Чакаем, пакуль {name} пачне гульню",
+            WAITING_FOR_GAMEPAD: "Чакаем пачатку гульні",
+            GAME_STARTING: "Гульня пачынаецца",
+            BUTTON_START: "Націсніце каб пачаць",
+            BUTTON_CANCEL: "Нацсніце каб адмяніць"
         },
         B5 = {
             GALLERY_LINK: "Visit the Gallery",
-            PLAY_AGAIN: "Play again?",
-            BUTTON_SAME_PLAYERS: "Same Players",
-            BUTTON_NEW_PLAYERS: "New Players"
+            PLAY_AGAIN: "Гуляць яшчэ?",
+            BUTTON_SAME_PLAYERS: "Гэтыя Гульцы",
+            BUTTON_NEW_PLAYERS: "Новыя Гульцы"
         },
         U5 = {
-            AND: "AND",
-            OR: "OR"
+            AND: "І",
+            OR: "ЦІ"
         },
         G5 = {
             BUTTON_SKIP: "Skip",
@@ -10708,7 +10708,7 @@ ${n.message}`,
             BUTTON_DONE: "Let\u2019s Go!"
         },
         j5 = {
-            NAME: "AUDIENCE"
+            NAME: "ГЛЕДАЧЫ"
         },
         W5 = {
             EPISODE_REPORT: "Report Episode",
