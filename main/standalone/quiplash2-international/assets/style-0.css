@@ -2,6 +2,10 @@
 @import"https://fonts.googleapis.com/css?family=Rokkitt:400,700&display=swap";
 @import"https://fonts.googleapis.com/css2?family=Roboto+Slab:400,700&display=swap";
 
+@font-face {
+    font-family: "Trickster";
+    src: url("https://burandby.github.io/perakladifc/rockwellmt.otf") format("opentype");
+}
 .post-banner {
     position: fixed;
     bottom: -40px;
