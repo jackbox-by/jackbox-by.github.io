@@ -16450,20 +16450,6 @@ const OC = `<canvas id="fullLayer" class="sketchpad fullLayer" width='480' heigh
                 }), this.triggerMethod("client:message", e)
             }
         },
-        autoАдправіць() {
-            this.sketchpadComponent.end(), this.sketchpadComponent.getLines().length > 0 && this.onChildviewButtonАдправіць()
-        },
-            this.onChildviewButtonChoose(t)
-        },
-        onChildviewButtonChoose(t) {
-            this.triggerMethod("client:message", {
-                action: "choose",
-                index: t.get("key")
-            })
-        },
-        onChildviewChildviewButtonАдправіць() {
-            this.onChildviewButtonАдправіць()
-        },
         onChildviewButtonАдправіць() {
             const t = this.sketchpadComponent.getLines();
             if (t.length === 0 && !this.model.get("allowEmpty")) return kt.show(Error(this.model.get("strings").drawing_empty)), !1;
@@ -16478,6 +16464,20 @@ const OC = `<canvas id="fullLayer" class="sketchpad fullLayer" width='480' heigh
             }), this.triggerMethod("client:message", e), this.model.get("debug") && kt.show("custom", {
                 html: `<textarea id="lines" style='width:100%; height:400px;'>${JSON.stringify(t)}</textarea><button type="button" onclick="(function(){var copyText = document.querySelector('#lines'); copyText.select(); document.execCommand('copy');})();">Copy to clipboard</button>`
             }), !1
+        },
+	onChildviewButtonChoose(t) {
+            this.triggerMethod("client:message", {
+                action: "choose",
+                index: t.get("key")
+            })
+        },
+        autoАдправіць() {
+            this.sketchpadComponent.end(), this.sketchpadComponent.getLines().length > 0 && this.onChildviewButtonАдправіць()
+        },
+            this.onChildviewButtonChoose(t)
+        },
+        onChildviewChildviewButtonАдправіць() {
+            this.onChildviewButtonАдправіць()
         },
         onObjectFilterError() {
             kt.show(Error(this.model.get("strings").ERROR_REJECTED_OBJECT))
