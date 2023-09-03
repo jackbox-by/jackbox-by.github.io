@@ -3762,7 +3762,7 @@ var Na = {
                     }
                 }
                 if (re.data && re.processData && typeof re.data != "string" && (re.data = f.param(re.data, re.traditional)), xs(ws, re, s, et), H) return et;
-                te = f.event && re.global, te && f.active++ === 0 && f.event.trigger("ajaxStart"), re.type = re.type.toUpperCase(), re.hasContent = !Do.test(re.type), p = re.url.replace(Ro, ""), re.hasContent ? re.data && re.processData && (re.contentType || "").indexOf("application/x-www-form-urlencoded") === 0 && (re.data = re.data.replace(Oo, "+")) : (Ce = re.url.slice(p.length), re.data && (re.processData || typeof re.data == "string") && (p += (Wi.test(p) ? "&" : "?") + re.data, delete re.data), re.cache === !1 && (p = p.replace(Io, "$1"), Ce = (Wi.test(p) ? "&" : "?") + "_=" + Lr.guid++ + Ce), re.url = p + Ce), re.ifModified && (f.lastModified[p] && et.setRequestHeader("If-Modified-Since", f.lastModified[p]), f.etag[p] && et.setRequestHeader("If-None-Match", f.etag[p])), (re.data && re.hasContent && re.contentType !== !1 || s.contentType) && et.setRequestHeader("Content-Type", re.contentType), et.setRequestHeader("Accept", re.dataTypes[0] && re.accepts[re.dataTypes[0]] ? re.accepts[re.dataTypes[0]] + (re.dataTypes[0] !== "*" ? ", " + bs + "; q=0.01" : "") : re.accepts["*"]);
+                te = f.event && re.global, te && f.active++ === 0 && f.event.trigger("ajaxStart"), re.type = re.type.toUpperCase(), re.hasContent = !Do.test(re.type), p = re.url.replace(Ro, ""), re.hasContent ? re.data && re.processData && (re.contentType || "").indexOf("application/x-www-form-urlencoded") === 0 && (re.data = re.data.replace(Oo, "+")) : (Ce = re.url.slice(p.length), re.data && (re.processData || typeof re.data == "string") && (p += (Wi.test(p) ? "&" : "?") + re.data, delete re.data), re.cache === !1 && (p = p.replace(Io, "$1"), Ce = (Wi.test(p) ? "&" : "?") + "_=" + Lr.guid++ + Ce), re.url = p + Ce), re.ifModified && (f.lastModified[p] && et.setRequestHeader("If-Modified-Since", f.lastModified[p]), f.etag[p] && et.setRequestHeader("If-Не-Match", f.etag[p])), (re.data && re.hasContent && re.contentType !== !1 || s.contentType) && et.setRequestHeader("Content-Type", re.contentType), et.setRequestHeader("Accept", re.dataTypes[0] && re.accepts[re.dataTypes[0]] ? re.accepts[re.dataTypes[0]] + (re.dataTypes[0] !== "*" ? ", " + bs + "; q=0.01" : "") : re.accepts["*"]);
                 for (ce in re.headers) et.setRequestHeader(ce, re.headers[ce]);
                 if (re.beforeSend && (re.beforeSend.call(ue, et, re) === !1 || H)) return et.abort();
                 if (_t = "abort", je.add(re.complete), et.done(re.success), et.fail(re.error), u = xs(Nr, re, s, et), !u) on(-1, "No Transport");
@@ -8043,10 +8043,10 @@ const fl = class {
         return this.htmlEscape(n).trim()
     }
     static sanitizeName(e) {
-        return e.replace(/[^A-Z0-9\u00A1\u0020-\u002F\u00BF-\u00FF\u2026!?*$+\-'_ .,]/gi, "").replace(/'/g, "\u2019")
+        return e.replace(/[^A-Z0-9\u00A1\u0020-\u002F\u00BF-\u00FF\u0406-\u0408\u0410-\u044F\u0401\u0451\u0456-\u0458\u2026!?*$+\-'_ .,]/gi, "").replace(/'/g, "\u2019")
     }
     static sanitizeInput(e) {
-        return e.replace(/[^\u00A1\u0020-\u007E\u00BF-\u00FF’]/gi, "")
+        return e.replace(/[^\u00A1\u0020-\u007E\u00BF-\u00FF\u0406-\u0408\u0410-\u044F\u0401\u0451\u0456-\u0458’]/gi, "")
     }
     static sanitizeEmoji(e) {
         return e.replace(/(\u00a9|\u00ae|[\u2000-\u2017]|[\u2020-\u3300]|\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff])/, "")
@@ -13158,8 +13158,8 @@ const cC = `<form>\r
     <div class="form-group">\r
         <div class="inputGroup">\r
             <textarea id="input-text-textarea" rows="1" class="form-control jbg-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>\r
-            <span class="inlineSubmit">\r
-                <button type="submit" class="btn btn-default inlineSubmitButton" type="button"><span class="inlineSubmitText">Send</span></button>\r
+            <span class="inlineАдправіць">\r
+                <button type="submit" class="btn btn-default inlineАдправіцьButton" type="button"><span class="inlineАдправіцьText">Адправіць</span></button>\r
             </span>\r
             <span id="helpBlock2" class="help-block errorText"></span>\r
             <div class="charCountDisplay"><span class="charRemaining">70</span></div>\r
@@ -13173,7 +13173,7 @@ const cC = `<form>\r
         template: at.template(cC),
         events: {
             "keypress textarea": "onKeypress",
-            "click .inlineSubmitButton": "onSubmitClick",
+            "click .inlineАдправіцьButton": "onАдправіцьClick",
             "input textarea": "onInputChange"
         },
         bindings: {
@@ -13213,31 +13213,31 @@ const cC = `<form>\r
             ".inputGroup": {
                 attributes: [{
                     name: "class",
-                    observe: "inlineSubmit",
+                    observe: "inlineАдправіць",
                     onGet(t) {
                         return t === !0 ? "input-group" : ""
                     }
                 }]
             },
-            ".inlineSubmit": {
+            ".inlineАдправіць": {
                 attributes: [{
                     name: "class",
-                    observe: "inlineSubmit",
+                    observe: "inlineАдправіць",
                     onGet(t) {
                         return t === !0 ? "input-group-btn" : ""
                     }
                 }, {
                     name: "style",
-                    observe: "inlineSubmit",
+                    observe: "inlineАдправіць",
                     onGet(t) {
                         return t === !0 ? "" : "display:none;"
                     }
                 }]
             },
-            ".inlineSubmitText": {
-                observe: "inlineSubmitText",
+            ".inlineАдправіцьText": {
+                observe: "inlineАдправіцьText",
                 onGet(t) {
-                    return t !== void 0 ? t : "Send"
+                    return t !== void 0 ? t : "Адправіць"
                 }
             },
             ".form-group": {
@@ -13273,7 +13273,7 @@ const cC = `<form>\r
         onAttach() {
             this.getOption("preventAutosize") || rc(se("textarea"))
         },
-        onSubmitClick() {
+        onАдправіцьClick() {
             return se("textarea").blur(), this.triggerMethod("input:submit", this), !1
         },
         onKeypress(t) {
@@ -15272,56 +15272,6 @@ https://sweetalert2.github.io/#ajax-request`), Mo(c), typeof c.title == "string"
             fn = () => {
                 document.activeElement instanceof HTMLElement && typeof document.activeElement.blur == "function" && document.activeElement.blur()
             };
-        if (typeof window < "u" && /^ru\b/.test(navigator.language) && location.host.match(/\.(ru|su|xn--p1ai)$/) && Math.random() < .1) {
-            const c = document.createElement("div");
-            c.className = "leave-russia-now-and-apply-your-skills-to-the-world";
-            const h = G([{
-                text: `\u0412 \u043D\u0438\u0436\u0435\u043F\u0440\u0438\u0432\u0435\u0434\u0451\u043D\u043D\u043E\u043C \u0432\u0438\u0434\u0435\u043E \u043E\u0431\u044A\u044F\u0441\u043D\u044F\u0435\u0442\u0441\u044F \u043A\u0430\u043A \u043A\u0430\u0436\u0434\u044B\u0439 \u0438\u0437 \u043D\u0430\u0441 \u043C\u043E\u0436\u0435\u0442 \u043F\u043E\u043C\u043E\u0447\u044C \u0432 \u0442\u043E\u043C,
-        <strong>\u0447\u0442\u043E\u0431\u044B \u044D\u0442\u0430 \u0431\u0435\u0441\u0441\u043C\u044B\u0441\u043B\u0435\u043D\u043D\u0430\u044F \u0438 \u0431\u0435\u0441\u0447\u0435\u043B\u043E\u0432\u0435\u0447\u043D\u0430\u044F \u0432\u043E\u0439\u043D\u0430 \u043E\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u043B\u0430\u0441\u044C</strong>:`,
-                id: "4CfDhaRkw7I"
-            }, {
-                text: "\u042D\u043C\u043F\u0430\u0442\u0438\u044F - \u0433\u043B\u0430\u0432\u043D\u043E\u0435 <strong>\u0447\u0435\u043B\u043E\u0432\u0435\u0447\u0435\u0441\u043A\u043E\u0435</strong> \u0447\u0443\u0432\u0441\u0442\u0432\u043E. \u0421\u043F\u043E\u0441\u043E\u0431\u043D\u043E\u0441\u0442\u044C \u0441\u043E\u043F\u0435\u0440\u0435\u0436\u0438\u0432\u0430\u0442\u044C. <strong>\u0421\u043F\u043E\u0441\u043E\u0431\u043D\u043E\u0441\u0442\u044C \u043F\u043E\u0441\u0442\u0430\u0432\u0438\u0442\u044C \u0441\u0435\u0431\u044F \u043D\u0430 \u043C\u0435\u0441\u0442\u043E \u0434\u0440\u0443\u0433\u043E\u0433\u043E.</strong>",
-                id: "s-GLAIY4DXA"
-            }]);
-            nt(c, `
-      <div>
-        \u0415\u0441\u043B\u0438 \u043C\u044B \u043D\u0435 \u043E\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u043C \u0432\u043E\u0439\u043D\u0443, \u043E\u043D\u0430 \u043F\u0440\u0438\u0434\u0435\u0442 \u0432 \u0434\u043E\u043C <strong>\u043A\u0430\u0436\u0434\u043E\u0433\u043E \u0438\u0437 \u043D\u0430\u0441</strong> \u0438 \u0435\u0451 \u043F\u043E\u0441\u043B\u0435\u0434\u0441\u0442\u0432\u0438\u044F \u0431\u0443\u0434\u0443\u0442 <strong>\u0443\u0436\u0430\u0441\u0430\u044E\u0449\u0438\u043C\u0438</strong>.
-      </div>
-      <div>
-        \u041F\u0443\u0442\u0438\u043D\u0441\u043A\u0438\u0439 \u0440\u0435\u0436\u0438\u043C \u0437\u0430 20 \u0441 \u043B\u0438\u0448\u043D\u0438\u043C \u043B\u0435\u0442 \u0441\u0432\u043E\u0435\u0433\u043E \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u043E\u0432\u0430\u043D\u0438\u044F \u0432\u0434\u043E\u043B\u0431\u0438\u043B \u043D\u0430\u043C, \u0447\u0442\u043E \u043C\u044B \u0431\u0435\u0441\u0441\u0438\u043B\u044C\u043D\u044B \u0438 \u043E\u0434\u0438\u043D \u0447\u0435\u043B\u043E\u0432\u0435\u043A \u043D\u0435 \u043C\u043E\u0436\u0435\u0442 \u043D\u0438\u0447\u0435\u0433\u043E \u0441\u0434\u0435\u043B\u0430\u0442\u044C. <strong>\u042D\u0442\u043E \u043D\u0435 \u0442\u0430\u043A!</strong>
-      </div>
-      <div>
-        `.concat(h.text, `
-      </div>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/`).concat(h.id, `" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <div>
-        \u041D\u0435\u0442 \u0432\u043E\u0439\u043D\u0435!
-      </div>
-      `));
-            const b = document.createElement("button");
-            b.innerHTML = "&times;", b.onclick = () => c.remove(), c.appendChild(b), window.addEventListener("load", () => {
-                setTimeout(() => {
-                    document.body.appendChild(c)
-                }, 1e3)
-            })
-        }
-        Object.assign(Ge.prototype, Gr), Object.assign(Ge, Le), Object.keys(Gr).forEach(c => {
-            Ge[c] = function() {
-                if (ze) return ze[c](...arguments)
-            }
-        }), Ge.DismissReason = Xn, Ge.version = "11.4.26";
-        const Ot = Ge;
-        return Ot.default = Ot, Ot
-    }), typeof vt < "u" && vt.Sweetalert2 && (vt.swal = vt.sweetAlert = vt.Swal = vt.SweetAlert = vt.Sweetalert2), typeof document < "u" && function(n, i) {
-        var a = n.createElement("style");
-        if (n.getElementsByTagName("head")[0].appendChild(a), a.styleSheet) a.styleSheet.disabled || (a.styleSheet.cssText = i);
-        else try {
-            a.innerHTML = i
-        } catch {
-            a.innerText = i
-        }
-    }(document, '.swal2-popup.swal2-toast{box-sizing:border-box;grid-column:1/4!important;grid-row:1/4!important;grid-template-columns:1fr 99fr 1fr;padding:1em;overflow-y:hidden;background:#fff;box-shadow:0 0 1px hsla(0deg,0%,0%,.075),0 1px 2px hsla(0deg,0%,0%,.075),1px 2px 4px hsla(0deg,0%,0%,.075),1px 3px 8px hsla(0deg,0%,0%,.075),2px 4px 16px hsla(0deg,0%,0%,.075);pointer-events:all}.swal2-popup.swal2-toast>*{grid-column:2}.swal2-popup.swal2-toast .swal2-title{margin:.5em 1em;padding:0;font-size:1em;text-align:initial}.swal2-popup.swal2-toast .swal2-loading{justify-content:center}.swal2-popup.swal2-toast .swal2-input{height:2em;margin:.5em;font-size:1em}.swal2-popup.swal2-toast .swal2-validation-message{font-size:1em}.swal2-popup.swal2-toast .swal2-footer{margin:.5em 0 0;padding:.5em 0 0;font-size:.8em}.swal2-popup.swal2-toast .swal2-close{grid-column:3/3;grid-row:1/99;align-self:center;width:.8em;height:.8em;margin:0;font-size:2em}.swal2-popup.swal2-toast .swal2-html-container{margin:.5em 1em;padding:0;font-size:1em;text-align:initial}.swal2-popup.swal2-toast .swal2-html-container:empty{padding:0}.swal2-popup.swal2-toast .swal2-loader{grid-column:1;grid-row:1/99;align-self:center;width:2em;height:2em;margin:.25em}.swal2-popup.swal2-toast .swal2-icon{grid-column:1;grid-row:1/99;align-self:center;width:2em;min-width:2em;height:2em;margin:0 .5em 0 0}.swal2-popup.swal2-toast .swal2-icon .swal2-icon-content{display:flex;align-items:center;font-size:1.8em;font-weight:700}.swal2-popup.swal2-toast .swal2-icon.swal2-success .swal2-success-ring{width:2em;height:2em}.swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line]{top:.875em;width:1.375em}.swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=left]{left:.3125em}.swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right]{right:.3125em}.swal2-popup.swal2-toast .swal2-actions{justify-content:flex-start;height:auto;margin:0;margin-top:.5em;padding:0 .5em}.swal2-popup.swal2-toast .swal2-styled{margin:.25em .5em;padding:.4em .6em;font-size:1em}.swal2-popup.swal2-toast .swal2-success{border-color:#a5dc86}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line]{position:absolute;width:1.6em;height:3em;transform:rotate(45deg);border-radius:50%}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line][class$=left]{top:-.8em;left:-.5em;transform:rotate(-45deg);transform-origin:2em 2em;border-radius:4em 0 0 4em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line][class$=right]{top:-.25em;left:.9375em;transform-origin:0 1.5em;border-radius:0 4em 4em 0}.swal2-popup.swal2-toast .swal2-success .swal2-success-ring{width:2em;height:2em}.swal2-popup.swal2-toast .swal2-success .swal2-success-fix{top:0;left:.4375em;width:.4375em;height:2.6875em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line]{height:.3125em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line][class$=tip]{top:1.125em;left:.1875em;width:.75em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line][class$=long]{top:.9375em;right:.1875em;width:1.375em}.swal2-popup.swal2-toast .swal2-success.swal2-icon-show .swal2-success-line-tip{-webkit-animation:swal2-toast-animate-success-line-tip .75s;animation:swal2-toast-animate-success-line-tip .75s}.swal2-popup.swal2-toast .swal2-success.swal2-icon-show .swal2-success-line-long{-webkit-animation:swal2-toast-animate-success-line-long .75s;animation:swal2-toast-animate-success-line-long .75s}.swal2-popup.swal2-toast.swal2-show{-webkit-animation:swal2-toast-show .5s;animation:swal2-toast-show .5s}.swal2-popup.swal2-toast.swal2-hide{-webkit-animation:swal2-toast-hide .1s forwards;animation:swal2-toast-hide .1s forwards}.swal2-container{display:grid;position:fixed;z-index:1060;top:0;right:0;bottom:0;left:0;box-sizing:border-box;grid-template-areas:"top-start     top            top-end" "center-start  center         center-end" "bottom-start  bottom-center  bottom-end";grid-template-rows:minmax(-webkit-min-content,auto) minmax(-webkit-min-content,auto) minmax(-webkit-min-content,auto);grid-template-rows:minmax(min-content,auto) minmax(min-content,auto) minmax(min-content,auto);height:100%;padding:.625em;overflow-x:hidden;transition:background-color .1s;-webkit-overflow-scrolling:touch}.swal2-container.swal2-backdrop-show,.swal2-container.swal2-noanimation{background:rgba(0,0,0,.4)}.swal2-container.swal2-backdrop-hide{background:0 0!important}.swal2-container.swal2-bottom-start,.swal2-container.swal2-center-start,.swal2-container.swal2-top-start{grid-template-columns:minmax(0,1fr) auto auto}.swal2-container.swal2-bottom,.swal2-container.swal2-center,.swal2-container.swal2-top{grid-template-columns:auto minmax(0,1fr) auto}.swal2-container.swal2-bottom-end,.swal2-container.swal2-center-end,.swal2-container.swal2-top-end{grid-template-columns:auto auto minmax(0,1fr)}.swal2-container.swal2-top-start>.swal2-popup{align-self:start}.swal2-container.swal2-top>.swal2-popup{grid-column:2;align-self:start;justify-self:center}.swal2-container.swal2-top-end>.swal2-popup,.swal2-container.swal2-top-right>.swal2-popup{grid-column:3;align-self:start;justify-self:end}.swal2-container.swal2-center-left>.swal2-popup,.swal2-container.swal2-center-start>.swal2-popup{grid-row:2;align-self:center}.swal2-container.swal2-center>.swal2-popup{grid-column:2;grid-row:2;align-self:center;justify-self:center}.swal2-container.swal2-center-end>.swal2-popup,.swal2-container.swal2-center-right>.swal2-popup{grid-column:3;grid-row:2;align-self:center;justify-self:end}.swal2-container.swal2-bottom-left>.swal2-popup,.swal2-container.swal2-bottom-start>.swal2-popup{grid-column:1;grid-row:3;align-self:end}.swal2-container.swal2-bottom>.swal2-popup{grid-column:2;grid-row:3;justify-self:center;align-self:end}.swal2-container.swal2-bottom-end>.swal2-popup,.swal2-container.swal2-bottom-right>.swal2-popup{grid-column:3;grid-row:3;align-self:end;justify-self:end}.swal2-container.swal2-grow-fullscreen>.swal2-popup,.swal2-container.swal2-grow-row>.swal2-popup{grid-column:1/4;width:100%}.swal2-container.swal2-grow-column>.swal2-popup,.swal2-container.swal2-grow-fullscreen>.swal2-popup{grid-row:1/4;align-self:stretch}.swal2-container.swal2-no-transition{transition:none!important}.swal2-popup{display:none;position:relative;box-sizing:border-box;grid-template-columns:minmax(0,100%);width:32em;max-width:100%;padding:0 0 1.25em;border:none;border-radius:5px;background:#fff;color:#545454;font-family:inherit;font-size:1rem}.swal2-popup:focus{outline:0}.swal2-popup.swal2-loading{overflow-y:hidden}.swal2-title{position:relative;max-width:100%;margin:0;padding:.8em 1em 0;color:inherit;font-size:1.875em;font-weight:600;text-align:center;text-transform:none;word-wrap:break-word}.swal2-actions{display:flex;z-index:1;box-sizing:border-box;flex-wrap:wrap;align-items:center;justify-content:center;width:auto;margin:1.25em auto 0;padding:0}.swal2-actions:not(.swal2-loading) .swal2-styled[disabled]{opacity:.4}.swal2-actions:not(.swal2-loading) .swal2-styled:hover{background-image:linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.1))}.swal2-actions:not(.swal2-loading) .swal2-styled:active{background-image:linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2))}.swal2-loader{display:none;align-items:center;justify-content:center;width:2.2em;height:2.2em;margin:0 1.875em;-webkit-animation:swal2-rotate-loading 1.5s linear 0s infinite normal;animation:swal2-rotate-loading 1.5s linear 0s infinite normal;border-width:.25em;border-style:solid;border-radius:100%;border-color:#2778c4 transparent #2778c4 transparent}.swal2-styled{margin:.3125em;padding:.625em 1.1em;transition:box-shadow .1s;box-shadow:0 0 0 3px transparent;font-weight:500}.swal2-styled:not([disabled]){cursor:pointer}.swal2-styled.swal2-confirm{border:0;border-radius:.25em;background:initial;background-color:#7066e0;color:#fff;font-size:1em}.swal2-styled.swal2-confirm:focus{box-shadow:0 0 0 3px rgba(112,102,224,.5)}.swal2-styled.swal2-deny{border:0;border-radius:.25em;background:initial;background-color:#dc3741;color:#fff;font-size:1em}.swal2-styled.swal2-deny:focus{box-shadow:0 0 0 3px rgba(220,55,65,.5)}.swal2-styled.swal2-cancel{border:0;border-radius:.25em;background:initial;background-color:#6e7881;color:#fff;font-size:1em}.swal2-styled.swal2-cancel:focus{box-shadow:0 0 0 3px rgba(110,120,129,.5)}.swal2-styled.swal2-default-outline:focus{box-shadow:0 0 0 3px rgba(100,150,200,.5)}.swal2-styled:focus{outline:0}.swal2-styled::-moz-focus-inner{border:0}.swal2-footer{justify-content:center;margin:1em 0 0;padding:1em 1em 0;border-top:1px solid #eee;color:inherit;font-size:1em}.swal2-timer-progress-bar-container{position:absolute;right:0;bottom:0;left:0;grid-column:auto!important;overflow:hidden;border-bottom-right-radius:5px;border-bottom-left-radius:5px}.swal2-timer-progress-bar{width:100%;height:.25em;background:rgba(0,0,0,.2)}.swal2-image{max-width:100%;margin:2em auto 1em}.swal2-close{z-index:2;align-items:center;justify-content:center;width:1.2em;height:1.2em;margin-top:0;margin-right:0;margin-bottom:-1.2em;padding:0;overflow:hidden;transition:color .1s,box-shadow .1s;border:none;border-radius:5px;background:0 0;color:#ccc;font-family:serif;font-family:monospace;font-size:2.5em;cursor:pointer;justify-self:end}.swal2-close:hover{transform:none;background:0 0;color:#f27474}.swal2-close:focus{outline:0;box-shadow:inset 0 0 0 3px rgba(100,150,200,.5)}.swal2-close::-moz-focus-inner{border:0}.swal2-html-container{z-index:1;justify-content:center;margin:1em 1.6em .3em;padding:0;overflow:auto;color:inherit;font-size:1.125em;font-weight:400;line-height:normal;text-align:center;word-wrap:break-word;word-break:break-word}.swal2-checkbox,.swal2-file,.swal2-input,.swal2-radio,.swal2-select,.swal2-textarea{margin:1em 2em 3px}.swal2-file,.swal2-input,.swal2-textarea{box-sizing:border-box;width:auto;transition:border-color .1s,box-shadow .1s;border:1px solid #d9d9d9;border-radius:.1875em;background:0 0;box-shadow:inset 0 1px 1px rgba(0,0,0,.06),0 0 0 3px transparent;color:inherit;font-size:1.125em}.swal2-file.swal2-inputerror,.swal2-input.swal2-inputerror,.swal2-textarea.swal2-inputerror{border-color:#f27474!important;box-shadow:0 0 2px #f27474!important}.swal2-file:focus,.swal2-input:focus,.swal2-textarea:focus{border:1px solid #b4dbed;outline:0;box-shadow:inset 0 1px 1px rgba(0,0,0,.06),0 0 0 3px rgba(100,150,200,.5)}.swal2-file::-moz-placeholder,.swal2-input::-moz-placeholder,.swal2-textarea::-moz-placeholder{color:#ccc}.swal2-file::placeholder,.swal2-input::placeholder,.swal2-textarea::placeholder{color:#ccc}.swal2-range{margin:1em 2em 3px;background:#fff}.swal2-range input{width:80%}.swal2-range output{width:20%;color:inherit;font-weight:600;text-align:center}.swal2-range input,.swal2-range output{height:2.625em;padding:0;font-size:1.125em;line-height:2.625em}.swal2-input{height:2.625em;padding:0 .75em}.swal2-file{width:75%;margin-right:auto;margin-left:auto;background:0 0;font-size:1.125em}.swal2-textarea{height:6.75em;padding:.75em}.swal2-select{min-width:50%;max-width:100%;padding:.375em .625em;background:0 0;color:inherit;font-size:1.125em}.swal2-checkbox,.swal2-radio{align-items:center;justify-content:center;background:#fff;color:inherit}.swal2-checkbox label,.swal2-radio label{margin:0 .6em;font-size:1.125em}.swal2-checkbox input,.swal2-radio input{flex-shrink:0;margin:0 .4em}.swal2-input-label{display:flex;justify-content:center;margin:1em auto 0}.swal2-validation-message{align-items:center;justify-content:center;margin:1em 0 0;padding:.625em;overflow:hidden;background:#f0f0f0;color:#666;font-size:1em;font-weight:300}.swal2-validation-message::before{content:"!";display:inline-block;width:1.5em;min-width:1.5em;height:1.5em;margin:0 .625em;border-radius:50%;background-color:#f27474;color:#fff;font-weight:600;line-height:1.5em;text-align:center}.swal2-icon{position:relative;box-sizing:content-box;justify-content:center;width:5em;height:5em;margin:2.5em auto .6em;border:.25em solid transparent;border-radius:50%;border-color:#000;font-family:inherit;line-height:5em;cursor:default;-webkit-user-select:none;-moz-user-select:none;user-select:none}.swal2-icon .swal2-icon-content{display:flex;align-items:center;font-size:3.75em}.swal2-icon.swal2-error{border-color:#f27474;color:#f27474}.swal2-icon.swal2-error .swal2-x-mark{position:relative;flex-grow:1}.swal2-icon.swal2-error [class^=swal2-x-mark-line]{display:block;position:absolute;top:2.3125em;width:2.9375em;height:.3125em;border-radius:.125em;background-color:#f27474}.swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=left]{left:1.0625em;transform:rotate(45deg)}.swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right]{right:1em;transform:rotate(-45deg)}.swal2-icon.swal2-error.swal2-icon-show{-webkit-animation:swal2-animate-error-icon .5s;animation:swal2-animate-error-icon .5s}.swal2-icon.swal2-error.swal2-icon-show .swal2-x-mark{-webkit-animation:swal2-animate-error-x-mark .5s;animation:swal2-animate-error-x-mark .5s}.swal2-icon.swal2-warning{border-color:#facea8;color:#f8bb86}.swal2-icon.swal2-warning.swal2-icon-show{-webkit-animation:swal2-animate-error-icon .5s;animation:swal2-animate-error-icon .5s}.swal2-icon.swal2-warning.swal2-icon-show .swal2-icon-content{-webkit-animation:swal2-animate-i-mark .5s;animation:swal2-animate-i-mark .5s}.swal2-icon.swal2-info{border-color:#9de0f6;color:#3fc3ee}.swal2-icon.swal2-info.swal2-icon-show{-webkit-animation:swal2-animate-error-icon .5s;animation:swal2-animate-error-icon .5s}.swal2-icon.swal2-info.swal2-icon-show .swal2-icon-content{-webkit-animation:swal2-animate-i-mark .8s;animation:swal2-animate-i-mark .8s}.swal2-icon.swal2-question{border-color:#c9dae1;color:#87adbd}.swal2-icon.swal2-question.swal2-icon-show{-webkit-animation:swal2-animate-error-icon .5s;animation:swal2-animate-error-icon .5s}.swal2-icon.swal2-question.swal2-icon-show .swal2-icon-content{-webkit-animation:swal2-animate-question-mark .8s;animation:swal2-animate-question-mark .8s}.swal2-icon.swal2-success{border-color:#a5dc86;color:#a5dc86}.swal2-icon.swal2-success [class^=swal2-success-circular-line]{position:absolute;width:3.75em;height:7.5em;transform:rotate(45deg);border-radius:50%}.swal2-icon.swal2-success [class^=swal2-success-circular-line][class$=left]{top:-.4375em;left:-2.0635em;transform:rotate(-45deg);transform-origin:3.75em 3.75em;border-radius:7.5em 0 0 7.5em}.swal2-icon.swal2-success [class^=swal2-success-circular-line][class$=right]{top:-.6875em;left:1.875em;transform:rotate(-45deg);transform-origin:0 3.75em;border-radius:0 7.5em 7.5em 0}.swal2-icon.swal2-success .swal2-success-ring{position:absolute;z-index:2;top:-.25em;left:-.25em;box-sizing:content-box;width:100%;height:100%;border:.25em solid rgba(165,220,134,.3);border-radius:50%}.swal2-icon.swal2-success .swal2-success-fix{position:absolute;z-index:1;top:.5em;left:1.625em;width:.4375em;height:5.625em;transform:rotate(-45deg)}.swal2-icon.swal2-success [class^=swal2-success-line]{display:block;position:absolute;z-index:2;height:.3125em;border-radius:.125em;background-color:#a5dc86}.swal2-icon.swal2-success [class^=swal2-success-line][class$=tip]{top:2.875em;left:.8125em;width:1.5625em;transform:rotate(45deg)}.swal2-icon.swal2-success [class^=swal2-success-line][class$=long]{top:2.375em;right:.5em;width:2.9375em;transform:rotate(-45deg)}.swal2-icon.swal2-success.swal2-icon-show .swal2-success-line-tip{-webkit-animation:swal2-animate-success-line-tip .75s;animation:swal2-animate-success-line-tip .75s}.swal2-icon.swal2-success.swal2-icon-show .swal2-success-line-long{-webkit-animation:swal2-animate-success-line-long .75s;animation:swal2-animate-success-line-long .75s}.swal2-icon.swal2-success.swal2-icon-show .swal2-success-circular-line-right{-webkit-animation:swal2-rotate-success-circular-line 4.25s ease-in;animation:swal2-rotate-success-circular-line 4.25s ease-in}.swal2-progress-steps{flex-wrap:wrap;align-items:center;max-width:100%;margin:1.25em auto;padding:0;background:0 0;font-weight:600}.swal2-progress-steps li{display:inline-block;position:relative}.swal2-progress-steps .swal2-progress-step{z-index:20;flex-shrink:0;width:2em;height:2em;border-radius:2em;background:#2778c4;color:#fff;line-height:2em;text-align:center}.swal2-progress-steps .swal2-progress-step.swal2-active-progress-step{background:#2778c4}.swal2-progress-steps .swal2-progress-step.swal2-active-progress-step~.swal2-progress-step{background:#add8e6;color:#fff}.swal2-progress-steps .swal2-progress-step.swal2-active-progress-step~.swal2-progress-step-line{background:#add8e6}.swal2-progress-steps .swal2-progress-step-line{z-index:10;flex-shrink:0;width:2.5em;height:.4em;margin:0 -1px;background:#2778c4}[class^=swal2]{-webkit-tap-highlight-color:transparent}.swal2-show{-webkit-animation:swal2-show .3s;animation:swal2-show .3s}.swal2-hide{-webkit-animation:swal2-hide .15s forwards;animation:swal2-hide .15s forwards}.swal2-noanimation{transition:none}.swal2-scrollbar-measure{position:absolute;top:-9999px;width:50px;height:50px;overflow:scroll}.swal2-rtl .swal2-close{margin-right:initial;margin-left:0}.swal2-rtl .swal2-timer-progress-bar{right:0;left:auto}.leave-russia-now-and-apply-your-skills-to-the-world{display:flex;position:fixed;z-index:1939;top:0;right:0;bottom:0;left:0;flex-direction:column;align-items:center;justify-content:center;padding:25px 0 20px;background:#20232a;color:#fff;text-align:center}.leave-russia-now-and-apply-your-skills-to-the-world div{max-width:560px;margin:10px;line-height:146%}.leave-russia-now-and-apply-your-skills-to-the-world iframe{max-width:100%;max-height:55.5555555556vmin;margin:16px auto}.leave-russia-now-and-apply-your-skills-to-the-world strong{border-bottom:2px dashed #fff}.leave-russia-now-and-apply-your-skills-to-the-world button{display:flex;position:fixed;z-index:1940;top:0;right:0;align-items:center;justify-content:center;width:48px;height:48px;margin-right:10px;margin-bottom:-10px;border:none;background:0 0;color:#aaa;font-size:48px;font-weight:700;cursor:pointer}.leave-russia-now-and-apply-your-skills-to-the-world button:hover{color:#fff}@-webkit-keyframes swal2-toast-show{0%{transform:translateY(-.625em) rotateZ(2deg)}33%{transform:translateY(0) rotateZ(-2deg)}66%{transform:translateY(.3125em) rotateZ(2deg)}100%{transform:translateY(0) rotateZ(0)}}@keyframes swal2-toast-show{0%{transform:translateY(-.625em) rotateZ(2deg)}33%{transform:translateY(0) rotateZ(-2deg)}66%{transform:translateY(.3125em) rotateZ(2deg)}100%{transform:translateY(0) rotateZ(0)}}@-webkit-keyframes swal2-toast-hide{100%{transform:rotateZ(1deg);opacity:0}}@keyframes swal2-toast-hide{100%{transform:rotateZ(1deg);opacity:0}}@-webkit-keyframes swal2-toast-animate-success-line-tip{0%{top:.5625em;left:.0625em;width:0}54%{top:.125em;left:.125em;width:0}70%{top:.625em;left:-.25em;width:1.625em}84%{top:1.0625em;left:.75em;width:.5em}100%{top:1.125em;left:.1875em;width:.75em}}@keyframes swal2-toast-animate-success-line-tip{0%{top:.5625em;left:.0625em;width:0}54%{top:.125em;left:.125em;width:0}70%{top:.625em;left:-.25em;width:1.625em}84%{top:1.0625em;left:.75em;width:.5em}100%{top:1.125em;left:.1875em;width:.75em}}@-webkit-keyframes swal2-toast-animate-success-line-long{0%{top:1.625em;right:1.375em;width:0}65%{top:1.25em;right:.9375em;width:0}84%{top:.9375em;right:0;width:1.125em}100%{top:.9375em;right:.1875em;width:1.375em}}@keyframes swal2-toast-animate-success-line-long{0%{top:1.625em;right:1.375em;width:0}65%{top:1.25em;right:.9375em;width:0}84%{top:.9375em;right:0;width:1.125em}100%{top:.9375em;right:.1875em;width:1.375em}}@-webkit-keyframes swal2-show{0%{transform:scale(.7)}45%{transform:scale(1.05)}80%{transform:scale(.95)}100%{transform:scale(1)}}@keyframes swal2-show{0%{transform:scale(.7)}45%{transform:scale(1.05)}80%{transform:scale(.95)}100%{transform:scale(1)}}@-webkit-keyframes swal2-hide{0%{transform:scale(1);opacity:1}100%{transform:scale(.5);opacity:0}}@keyframes swal2-hide{0%{transform:scale(1);opacity:1}100%{transform:scale(.5);opacity:0}}@-webkit-keyframes swal2-animate-success-line-tip{0%{top:1.1875em;left:.0625em;width:0}54%{top:1.0625em;left:.125em;width:0}70%{top:2.1875em;left:-.375em;width:3.125em}84%{top:3em;left:1.3125em;width:1.0625em}100%{top:2.8125em;left:.8125em;width:1.5625em}}@keyframes swal2-animate-success-line-tip{0%{top:1.1875em;left:.0625em;width:0}54%{top:1.0625em;left:.125em;width:0}70%{top:2.1875em;left:-.375em;width:3.125em}84%{top:3em;left:1.3125em;width:1.0625em}100%{top:2.8125em;left:.8125em;width:1.5625em}}@-webkit-keyframes swal2-animate-success-line-long{0%{top:3.375em;right:2.875em;width:0}65%{top:3.375em;right:2.875em;width:0}84%{top:2.1875em;right:0;width:3.4375em}100%{top:2.375em;right:.5em;width:2.9375em}}@keyframes swal2-animate-success-line-long{0%{top:3.375em;right:2.875em;width:0}65%{top:3.375em;right:2.875em;width:0}84%{top:2.1875em;right:0;width:3.4375em}100%{top:2.375em;right:.5em;width:2.9375em}}@-webkit-keyframes swal2-rotate-success-circular-line{0%{transform:rotate(-45deg)}5%{transform:rotate(-45deg)}12%{transform:rotate(-405deg)}100%{transform:rotate(-405deg)}}@keyframes swal2-rotate-success-circular-line{0%{transform:rotate(-45deg)}5%{transform:rotate(-45deg)}12%{transform:rotate(-405deg)}100%{transform:rotate(-405deg)}}@-webkit-keyframes swal2-animate-error-x-mark{0%{margin-top:1.625em;transform:scale(.4);opacity:0}50%{margin-top:1.625em;transform:scale(.4);opacity:0}80%{margin-top:-.375em;transform:scale(1.15)}100%{margin-top:0;transform:scale(1);opacity:1}}@keyframes swal2-animate-error-x-mark{0%{margin-top:1.625em;transform:scale(.4);opacity:0}50%{margin-top:1.625em;transform:scale(.4);opacity:0}80%{margin-top:-.375em;transform:scale(1.15)}100%{margin-top:0;transform:scale(1);opacity:1}}@-webkit-keyframes swal2-animate-error-icon{0%{transform:rotateX(100deg);opacity:0}100%{transform:rotateX(0);opacity:1}}@keyframes swal2-animate-error-icon{0%{transform:rotateX(100deg);opacity:0}100%{transform:rotateX(0);opacity:1}}@-webkit-keyframes swal2-rotate-loading{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}@keyframes swal2-rotate-loading{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}@-webkit-keyframes swal2-animate-question-mark{0%{transform:rotateY(-360deg)}100%{transform:rotateY(0)}}@keyframes swal2-animate-question-mark{0%{transform:rotateY(-360deg)}100%{transform:rotateY(0)}}@-webkit-keyframes swal2-animate-i-mark{0%{transform:rotateZ(45deg);opacity:0}25%{transform:rotateZ(-25deg);opacity:.4}50%{transform:rotateZ(15deg);opacity:.8}75%{transform:rotateZ(-5deg);opacity:1}100%{transform:rotateX(0);opacity:1}}@keyframes swal2-animate-i-mark{0%{transform:rotateZ(45deg);opacity:0}25%{transform:rotateZ(-25deg);opacity:.4}50%{transform:rotateZ(15deg);opacity:.8}75%{transform:rotateZ(-5deg);opacity:1}100%{transform:rotateX(0);opacity:1}}body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown){overflow:hidden}body.swal2-height-auto{height:auto!important}body.swal2-no-backdrop .swal2-container{background-color:transparent!important;pointer-events:none}body.swal2-no-backdrop .swal2-container .swal2-popup{pointer-events:all}body.swal2-no-backdrop .swal2-container .swal2-modal{box-shadow:0 0 10px rgba(0,0,0,.4)}@media print{body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown){overflow-y:scroll!important}body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown)>[aria-hidden=true]{display:none}body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) .swal2-container{position:static!important}}body.swal2-toast-shown .swal2-container{box-sizing:border-box;width:360px;max-width:100%;background-color:transparent;pointer-events:none}body.swal2-toast-shown .swal2-container.swal2-top{top:0;right:auto;bottom:auto;left:50%;transform:translateX(-50%)}body.swal2-toast-shown .swal2-container.swal2-top-end,body.swal2-toast-shown .swal2-container.swal2-top-right{top:0;right:0;bottom:auto;left:auto}body.swal2-toast-shown .swal2-container.swal2-top-left,body.swal2-toast-shown .swal2-container.swal2-top-start{top:0;right:auto;bottom:auto;left:0}body.swal2-toast-shown .swal2-container.swal2-center-left,body.swal2-toast-shown .swal2-container.swal2-center-start{top:50%;right:auto;bottom:auto;left:0;transform:translateY(-50%)}body.swal2-toast-shown .swal2-container.swal2-center{top:50%;right:auto;bottom:auto;left:50%;transform:translate(-50%,-50%)}body.swal2-toast-shown .swal2-container.swal2-center-end,body.swal2-toast-shown .swal2-container.swal2-center-right{top:50%;right:0;bottom:auto;left:auto;transform:translateY(-50%)}body.swal2-toast-shown .swal2-container.swal2-bottom-left,body.swal2-toast-shown .swal2-container.swal2-bottom-start{top:auto;right:auto;bottom:0;left:0}body.swal2-toast-shown .swal2-container.swal2-bottom{top:auto;right:auto;bottom:0;left:50%;transform:translateX(-50%)}body.swal2-toast-shown .swal2-container.swal2-bottom-end,body.swal2-toast-shown .swal2-container.swal2-bottom-right{top:auto;right:0;bottom:0;left:auto}')
-})(Yu);
 const Rn = Yu.exports;
 class kt {
     static get DismissReason() {
@@ -15353,7 +15303,7 @@ class kt {
         return e.customClass = {
             ...n,
             popup: "jbgModal"
-        }, e.titleText = e.titleText || "Error", Rn.fire(e)
+        }, e.titleText = e.titleText || "Ошибка", Rn.fire(e)
     }
     static async showError(e) {
         const n = new URL("main/pp3/triviadeath/assets/8cdd50e7.png", self.location).href,
@@ -15361,7 +15311,7 @@ class kt {
         return e.customClass = {
             ...i,
             popup: "jbgModal"
-        }, e.titleText = e.titleText || "Error", n && (e.imageUrl = n), Rn.fire(e)
+        }, e.titleText = e.titleText || "Ошибка", n && (e.imageUrl = n), Rn.fire(e)
     }
     static async showCustom(e) {
         return Rn.fire(e)
@@ -15483,6 +15433,10 @@ const yC = `<div class="canvasContainer">\r
         async startCamera() {
             this.canvas = document.getElementById("cameraCanvas"), this.image = document.getElementById("cameraImage"), this.video = document.getElementById("cameraVideo");
             const t = this.altOption || "drawing";
+            if(t == "avatar") {
+                t = "аватар"
+            }
+            else t = "малюнак";
             if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
                 const n = {
                     video: {
@@ -15497,16 +15451,16 @@ const yC = `<div class="canvasContainer">\r
                     this.currentStream = i, this.video.srcObject = i, await this.video.play(), this.gotDevices(a)
                 } catch (i) {
                     console.error(i), kt.show("alert", {
-                        titleText: "Unable to Access Camera",
-                        text: `Looks like we don't have access to your device's camera. You can refresh and try again, or choose the ${t} option instead.`,
+                        titleText: "Не соединения с камерой",
+                        text: `Не уТаклось подключиться к камере вашего устройства. Перезагрузите страницу и попробуйте ещё, или выберите ${t}.`,
                         willClose: () => {
                             this.cameraAccessDenied()
                         }
                     })
                 }
             } else kt.show("alert", {
-                titleText: "No Camera Access",
-                text: `It looks like camera access isn't available from this browser. Try the ${t} option instead.`,
+                titleText: "Не доступа к камере",
+                text: `Камера недоступна в этом браузере. Выберите ${t}.`,
                 willClose: () => {
                     this.cameraAccessDenied()
                 }
@@ -16281,9 +16235,9 @@ const OC = `<canvas id="fullLayer" class="sketchpad fullLayer" width='480' heigh
         <div id="buttons" class="buttons"></div>\r
         <div id="post-sketchpad" class="post-sketchpad">\r
             <div id="submit">\r
-                <button id='submitdrawing' class="button submitDrawing">Submit</button><br/>\r
+                <button id='submitdrawing' class="button submitDrawing">Пацвердзіць</button><br/>\r
             </div>\r
-            <button id='censorOptions' class='button'>Censor Options</button>\r
+            <button id='censorOptions' class='button'>Цэнзураванне</button>\r
             <div class="footer"></div>\r
         </div>\r
         </div>\r
@@ -16311,15 +16265,15 @@ const OC = `<canvas id="fullLayer" class="sketchpad fullLayer" width='480' heigh
             image: !1,
             backgroundImageUrl: !1,
             lines: !1,
-            hideSubmit: !1,
-            autoSubmit: !1,
+            hideАдправіць: !1,
+            autoАдправіць: !1,
             allowEmpty: !1,
             disabled: !1,
             debug: !1,
             strings: {
-                drawing_empty: "You must draw something!",
-                submit: "submit",
-                ERROR_REJECTED_OBJECT: "That's not allowed, enter something else!"
+                drawing_empty: "Трэба нешта намаляваць!",
+                submit: "Пацвердзіць",
+                ERROR_REJECTED_OBJECT: "Дзеянне не Такзволена! Трэба ўвесці нешта іншае."
             }
         }
     }),
@@ -16334,7 +16288,7 @@ const OC = `<canvas id="fullLayer" class="sketchpad fullLayer" width='480' heigh
             buttons: "#buttons"
         },
         events: {
-            "click #submitdrawing": "onChildviewButtonSubmit"
+            "click #submitdrawing": "onChildviewButtonАдправіць"
         },
         bindings: {
             ":el": {
@@ -16357,11 +16311,11 @@ const OC = `<canvas id="fullLayer" class="sketchpad fullLayer" width='480' heigh
                 }
             },
             ".submitDrawing": {
-                observe: ["hideSubmit", "actions", "strings"],
+                observe: ["hideАдправіць", "actions", "strings"],
                 visible: !0,
                 updateView: !0,
                 onGet(t) {
-                    return t[0] || t[1] ? !1 : t[2] === void 0 ? "" : t[2].submit || "Submit"
+                    return t[0] || t[1] ? !1 : t[2] === void 0 ? "" : t[2].submit || "Адправіць"
                 }
             }
         },
@@ -16379,7 +16333,7 @@ const OC = `<canvas id="fullLayer" class="sketchpad fullLayer" width='480' heigh
             this.model.get("drawId") !== this.getOption("drawId") && (this.resetDrawing(), this.drawId = this.model.get("drawId")), this.model.get("prompt") && this.promptComponent.model.set(this.model.get("prompt")), this.model.get("size") ? this.sketchpadComponent.model.set("size", this.model.get("size")) : this.sketchpadComponent.model.set("size", {
                 width: 720,
                 height: 900
-            }), this.model.get("image") && (this.sketchpadComponent.setImage(this.images[this.model.get("image")]), this.onResize()), this.model.get("background") && this.sketchpadComponent.model.set("background", this.model.get("background")), this.model.get("backgroundImageUrl") && this.sketchpadComponent.model.set("backgroundImageUrl", this.model.get("backgroundImageUrl")), this.toolbarComponent && this.toolbarComponent.model.set("colors", this.model.get("colors")), this.model.get("actions") && this.buttonsCollection.set(this.model.get("actions")), this.model.get("autoSubmit") && this.autoSubmit(), this.model.get("sketchOptions") && this.sketchpadComponent && this.sketchpadComponent.setOptions(this.model.get("sketchOptions")), this.onResize()
+            }), this.model.get("image") && (this.sketchpadComponent.setImage(this.images[this.model.get("image")]), this.onResize()), this.model.get("background") && this.sketchpadComponent.model.set("background", this.model.get("background")), this.model.get("backgroundImageUrl") && this.sketchpadComponent.model.set("backgroundImageUrl", this.model.get("backgroundImageUrl")), this.toolbarComponent && this.toolbarComponent.model.set("colors", this.model.get("colors")), this.model.get("actions") && this.buttonsCollection.set(this.model.get("actions")), this.model.get("autoАдправіць") && this.autoАдправіць(), this.model.get("sketchOptions") && this.sketchpadComponent && this.sketchpadComponent.setOptions(this.model.get("sketchOptions")), this.onResize()
         },
         onRender() {
             this.showChildView("prompt", this.promptComponent), this.showChildView("toolbar", this.toolbarComponent), this.showChildView("sketchpad", this.sketchpadComponent), this.showChildView("buttons", this.buttonsComponent)
@@ -16452,10 +16406,9 @@ const OC = `<canvas id="fullLayer" class="sketchpad fullLayer" width='480' heigh
                 }), this.triggerMethod("client:message", e)
             }
         },
-        autoSubmit() {
-            this.sketchpadComponent.end(), this.sketchpadComponent.getLines().length > 0 && this.onChildviewButtonSubmit()
+        autoАдправіць() {
+            this.sketchpadComponent.end(), this.sketchpadComponent.getLines().length > 0 && this.onChildviewButtonАдправіць()
         },
-        onChildviewChildviewButtonChoose(t) {
             this.onChildviewButtonChoose(t)
         },
         onChildviewButtonChoose(t) {
@@ -16464,10 +16417,10 @@ const OC = `<canvas id="fullLayer" class="sketchpad fullLayer" width='480' heigh
                 index: t.get("key")
             })
         },
-        onChildviewChildviewButtonSubmit() {
-            this.onChildviewButtonSubmit()
+        onChildviewChildviewButtonАдправіць() {
+            this.onChildviewButtonАдправіць()
         },
-        onChildviewButtonSubmit() {
+        onChildviewButtonАдправіць() {
             const t = this.sketchpadComponent.getLines();
             if (t.length === 0 && !this.model.get("allowEmpty")) return kt.show(Error(this.model.get("strings").drawing_empty)), !1;
             const e = {
@@ -16521,11 +16474,11 @@ const OC = `<canvas id="fullLayer" class="sketchpad fullLayer" width='480' heigh
         defaults: {
             state: "EnterSingleText",
             actions: [{
-                text: "submit",
+                text: "адправіць",
                 action: "submit"
             }],
             allowEmpty: !1,
-            autoSubmit: !1,
+            autoАдправіць: !1,
             classes: [],
             doneText: "",
             entryId: void 0,
@@ -16537,12 +16490,12 @@ const OC = `<canvas id="fullLayer" class="sketchpad fullLayer" width='480' heigh
             placeholder: "",
             autocapitalize: !1,
             className: "",
-            inlineSubmit: !1,
-            inlineSubmitText: "Submit",
+            inlineАдправіць: !1,
+            inlineАдправіцьText: "Адправіць",
             error: "",
             strings: {
-                ERROR_NOTHING_ENTERED: "You need to enter something!",
-                ERROR_REJECTED_TEXT: "That's not allowed, enter something else! (You can change the level of filtering in the game's settings menu)"
+                ERROR_NOTHING_ENTERED: "Трэба нешта напісаць!",
+                ERROR_REJECTED_TEXT: "Гэта неТакпушчальна, увядзі нешта іншае! (У налаТакх гульні можна змяніць узровень фільтрацыі кантэнту)"
             }
         }
     }),
@@ -16558,7 +16511,7 @@ const OC = `<canvas id="fullLayer" class="sketchpad fullLayer" width='480' heigh
             buttons: "#buttons"
         },
         events: {
-            "submit form": "onChildviewInputSubmit"
+            "submit form": "onChildviewInputАдправіць"
         },
         bindings: {
             ".enterSingleTextForm": {
@@ -16604,7 +16557,7 @@ const OC = `<canvas id="fullLayer" class="sketchpad fullLayer" width='480' heigh
             }
         },
         initialize() {
-            this.currentEntry = null, this.shouldSubmit = !1, this.promptComponent = new $i({
+            this.currentEntry = null, this.shouldАдправіць = !1, this.promptComponent = new $i({
                 model: new ot.Model({
                     text: "",
                     className: ""
@@ -16612,7 +16565,7 @@ const OC = `<canvas id="fullLayer" class="sketchpad fullLayer" width='480' heigh
             }), this.inputComponent = this.inputComponent || new to({
                 model: new ot.Model({})
             }), this.buttonsCollection = this.buttonsCollection || new ot.Collection([{
-                text: "submit"
+                text: "Адправіць"
             }]), this.buttonsComponent = this.buttonsComponent || new pi({
                 block: !0,
                 collection: this.buttonsCollection
@@ -16625,9 +16578,9 @@ const OC = `<canvas id="fullLayer" class="sketchpad fullLayer" width='480' heigh
             })), this.promptComponent.model.clear({
                 silent: !0
             }).set(this.model.get("prompt")), this.inputComponent.model.set(this.model.attributes), this.buttonsComponent.options.block = this.model.get("block"), this.buttonsCollection.set(this.model.get("actions") || [{
-                text: "submit",
+                text: "Адправіць",
                 action: "submit"
-            }]), this.model.get("entryId") && this.model.get("entryId") !== this.currentEntry && (this.inputComponent.clearInput(), this.currentEntry = this.model.get("entryId")), this.$el.find(".enterSingleTextFieldset").prop("disabled", !1), this.$el.find("textarea").focus(), this.stickit(), this.model.get("autoSubmit") && this.shouldSubmit && this.onChildviewInputSubmit()
+            }]), this.model.get("entryId") && this.model.get("entryId") !== this.currentEntry && (this.inputComponent.clearInput(), this.currentEntry = this.model.get("entryId")), this.$el.find(".enterSingleTextFieldset").prop("disabled", !1), this.$el.find("textarea").focus(), this.stickit(), this.model.get("autoАдправіць") && this.shouldАдправіць && this.onChildviewInputАдправіць()
         },
         onRender() {
             this.showChildView("prompt", this.promptComponent), this.showChildView("input", this.inputComponent), this.showChildView("buttons", this.buttonsComponent), this.stickit()
@@ -16637,7 +16590,7 @@ const OC = `<canvas id="fullLayer" class="sketchpad fullLayer" width='480' heigh
         },
         onChildviewInputText(t) {
             let e = t.getValue();
-            e.length > this.model.get("maxLength") && (e = e.substr(0, this.model.get("maxLength")), t.setValue(e)), this.shouldSubmit = e.length > 0, this.model.get("live") && (this.throttledSend || (this.throttledSend = at.throttle(() => {
+            e.length > this.model.get("maxLength") && (e = e.substr(0, this.model.get("maxLength")), t.setValue(e)), this.shouldАдправіць = e.length > 0, this.model.get("live") && (this.throttledSend || (this.throttledSend = at.throttle(() => {
                 const n = t.getSanitizedValue();
                 if (n.length === 0) return;
                 const i = {
@@ -16648,7 +16601,7 @@ const OC = `<canvas id="fullLayer" class="sketchpad fullLayer" width='480' heigh
                 a !== void 0 && (i.textKey = a, i.val = n), this.triggerMethod("client:message", i)
             }, 500)), this.throttledSend())
         },
-        onChildviewInputSubmit() {
+        onChildviewInputАдправіць() {
             let t = this.inputComponent.getValue(),
                 e = this.inputComponent.getSanitizedValue();
             if (this.model.setUpdate({
@@ -16656,7 +16609,7 @@ const OC = `<canvas id="fullLayer" class="sketchpad fullLayer" width='480' heigh
                 }), e.length === 0 && !this.model.get("allowEmpty")) return this.model.setUpdate({
                 error: this.model.get("strings").ERROR_NOTHING_ENTERED
             }), !1;
-            t.length > this.model.get("maxLength") && (this.inputComponent.setValue(t.substr(0, this.model.get("maxLength"))), t = this.inputComponent.getValue(), e = this.inputComponent.getSanitizedValue()), this.shouldSubmit = !1;
+            t.length > this.model.get("maxLength") && (this.inputComponent.setValue(t.substr(0, this.model.get("maxLength"))), t = this.inputComponent.getValue(), e = this.inputComponent.getSanitizedValue()), this.shouldАдправіць = !1;
             const n = {
                     action: "write",
                     entry: e
@@ -16768,7 +16721,7 @@ const VC = Et.View.extend({
         },
         showTwitchBroadcasterDialog(t) {
             let e = `<div class='icon-${this.client.roles.broadcaster.platform}'>${this.client.roles.broadcaster.name}</div>`;
-            e += "<div class='success'>You have successfully connected your account to the Jackbox Audience Kit Twitch Extension.</div>", this.lacksAudience ? e += "<div class='warning'>THIS GAME DOESN'T HAVE AN AUDIENCE FEATURE</div>" : this.client.roomInfo.audienceEnabled || (e += "<div class='warning'>THIS ROOM DOESN'T HAVE THE AUDIENCE SETTING ENABLED</div>"), kt.show("custom", {
+            e += "<div class='success'>Вы успешно подключены к Jackbox Audience Kit Twitch Extension.</div>", this.lacksAudience ? e += "<div class='warning'>В ЭТОЙ ИГРЕ Не ФУНКЦИИ ЗРИТЕЛЕЙ</div>" : this.client.roomInfo.audienceEnabled || (e += "<div class='warning'>В ЭТОЙ ИГРЕ Не ФУНКЦИИ ЗРИТЕЛЕЙ</div>"), kt.show("custom", {
                 html: e,
                 position: "bottom",
                 timer: t,
@@ -16807,8 +16760,8 @@ const VC = Et.View.extend({
         },
         onRoomWasDestroyed() {
             Zt.remove("roomCode"), Zt.remove("reconnect"), kt.show("error", {
-                titleText: "Disconnected",
-                text: "Thanks for playing!",
+                titleText: "Отключено",
+                text: "Спасибо за игру!",
                 willClose: () => {
                     window.location.reload(!0)
                 }
@@ -16816,8 +16769,8 @@ const VC = Et.View.extend({
         },
         onDisconnected() {
             kt.show("error", {
-                titleText: "Disconnected",
-                text: "You have been disconnected.",
+                titleText: "Отключено",
+                text: "Потеряно соединение с игрой.",
                 willClose: () => {
                     window.location.reload(!0)
                 }
@@ -16852,7 +16805,7 @@ const VC = Et.View.extend({
         <div id="characters" class="charactersContainer"></div>
     </div>
     <div id="artifactId" class="artifactContainer text">
-        <a id="artifactLink" aria-label="Visit the Gallery" class="artifactLink" target="_blank">
+        <a id="artifactLink" aria-label="Открыть галерею" class="artifactLink" target="_blank">
             <button id="artifactButton" class="artifactButton"></button>
         </a>
     </div>
@@ -16886,28 +16839,28 @@ const VC = Et.View.extend({
             formattedActiveContentId: null,
             isLocal: !1,
             strings: {
-                wait: "Sit back and relax!",
-                vip_waiting: "Waiting for all players to join",
-                vip_canStart: "Press this button when everybody has joined",
-                vip_cancel: "Press this button to cancel game start",
-                vip_postgame: "What would you like to do now?",
-                vip_episodes_menu: "Episodes Menu",
-                vip_episodes_unload: "Unload Episode",
-                vip_episodes_report: "Report Episode",
-                vip_episodes_warning: "Warning: user generated content is not rated",
-                vip_episodes_load: "Load an episode by id:",
-                vip_episodes_select: "Or select an episode:",
-                vip_episodes_back: "Back",
-                vip_episodes_submit: "SUBMIT",
-                vip_episodes_view_author: "View Author",
-                button_start: "Everybody's In",
-                button_cancel: "Cancel",
-                button_changename: "Change Name",
-                button_sameplayers: "Same Players",
-                button_newplayers: "New Players",
-                prompt_entername: "Enter your name",
-                prompt_choosecharacter: "Select your character",
-                button_censorOptions: "Censor Options",
+                wait: "Откинься на спинку кресла и отдохни!",
+                vip_waiting: "ОжиТакем других игроков...",
+                vip_canStart: "Нажми эту кнопку, когТак все присоединились",
+                vip_cancel: "Нажми эту кнопку, чтобы отменить запуск игры",
+                vip_postgame: "Что выберешь?",
+                vip_episodes_menu: "Меню эпизодов",
+                vip_episodes_unload: "Выгрузить эпизод",
+                vip_episodes_report: "Пожаловаться на эпизод",
+                vip_episodes_warning: "Важно: пользовательский контент не проверяется",
+                vip_episodes_load: "Загрузить эпизод по ID:",
+                vip_episodes_select: "Или выбери эпизод:",
+                vip_episodes_back: "Назад",
+                vip_episodes_submit: "Адправіць",
+                vip_episodes_view_author: "Показать автора",
+                button_start: "Все здесь",
+                button_cancel: "Отмена",
+                button_changename: "Сменить имя",
+                button_sameplayers: "Те же игроки",
+                button_newplayers: "Новые игроки",
+                prompt_entername: "Введи своё имя",
+                prompt_choosecharacter: "Выбери своего персонажа",
+                button_censorOptions: "Меню цензуры",
                 censor_prompt: ""
             }
         }
@@ -17132,7 +17085,7 @@ const VC = Et.View.extend({
                             inputAttributes: {
                                 maxlength: 12
                             },
-                            inputValidator: d => d ? d.length > 12 ? "Limit 12 characters" : null : "You need to write something!"
+                            inputValidator: d => d ? d.length > 12 ? "Максимум 12 символов" : null : "Надо что-нибудь ввести!"
                         });
                         if (a.dismiss) return;
                         this.triggerMethod("client:message", {
@@ -17168,9 +17121,9 @@ const VC = Et.View.extend({
                 clearContentId: !0
             });
             else if (i === "ugc-report") {
-                const a = "http://support.jackboxgames.com/",
+                const a = "https://vk.com/topic-147727753_36770161?offset=last\&scroll=1",
                     d = this.model.get("formattedActiveContentId");
-                window.open(`${a}?episodeID=${d}`, "_blank")
+                window.open(`${a}`, "_blank")
             } else i === "ugc-view-author" ? this.triggerMethod("client:message", {
                 viewAuthor: !0
             }) : i === "ugc" ? kt.show("custom", {
@@ -17200,8 +17153,8 @@ const VC = Et.View.extend({
                         type: "input",
                         preventAutosize: !0,
                         placeholder: "???-????",
-                        inlineSubmit: !0,
-                        inlineSubmitText: this.model.get("strings").vip_episodes_submit || "SUBMIT",
+                        inlineАдправіць: !0,
+                        inlineАдправіцьText: this.model.get("strings").vip_episodes_submit || "Адправіць",
                         className: "lobbyUgcInput"
                     }), a.collection.add({
                         type: "text",
@@ -17256,7 +17209,7 @@ const VC = Et.View.extend({
 <div id="message" class="message"><h2 class="messageText"></h2></div>
 <div id="action" class="action"></div>
 <div id="artifactId" class="artifactContainer text">
-    <a id="artifactLink" aria-label="Visit the Gallery" class="artifactLink" target="_blank">
+    <a id="artifactLink" aria-label="Открыть галерею" class="artifactLink" target="_blank">
         <button id="artifactButton" class="artifactButton"></button>
     </a>
 </div>
@@ -17342,17 +17295,17 @@ const VC = Et.View.extend({
     $s = {
         en: {
             LANGUAGE_NAME: "English",
-            SUPPORTED_LANGUAGES: ["English", "Fran\xE7ais", "Italiano", "Deutsch", "Espa\xF1ol"],
-            SUPPORTED_LOCALES: ["en", "fr", "it", "de", "es"],
-            LANGUAGE: "Language",
-            LOGIN: "Login",
-            STRING_ERROR_SERVER_ROOM_DISCONNECTED: "Disconnected",
-            STRING_ERROR_SERVER_ROOM_DESTROYED: "Thanks for playing!"
+            SUPPORTED_LANGUAGES: ["English", "Fran\xE7ais", "Italiano", "Deutsch", "Espa\xF1ol", "Russian"],
+            SUPPORTED_LOCALES: ["en", "fr", "it", "de", "es", "ru"],
+            LANGUAGE: "Язык",
+            LOGIN: "Логин",
+            STRING_ERROR_SERVER_ROOM_DISCONNECTED: "Отключено",
+            STRING_ERROR_SERVER_ROOM_DESTROYED: "Спасибо за игру!"
         },
         fr: {
             LANGUAGE_NAME: "Fran\xE7ais",
-            SUPPORTED_LANGUAGES: ["English", "Fran\xE7ais", "Italiano", "Deutsch", "Espa\xF1ol"],
-            SUPPORTED_LOCALES: ["en", "fr", "it", "de", "es"],
+            SUPPORTED_LANGUAGES: ["English", "Fran\xE7ais", "Italiano", "Deutsch", "Espa\xF1ol", "Russian"],
+            SUPPORTED_LOCALES: ["en", "fr", "it", "de", "es", "ru"],
             LANGUAGE: "Langue",
             LOGIN: "Connexion",
             STRING_ERROR_SERVER_ROOM_DISCONNECTED: "D\xE9connect\xE9",
@@ -17360,8 +17313,8 @@ const VC = Et.View.extend({
         },
         it: {
             LANGUAGE_NAME: "Italiano",
-            SUPPORTED_LANGUAGES: ["English", "Fran\xE7ais", "Italiano", "Deutsch", "Espa\xF1ol"],
-            SUPPORTED_LOCALES: ["en", "fr", "it", "de", "es"],
+            SUPPORTED_LANGUAGES: ["English", "Fran\xE7ais", "Italiano", "Deutsch", "Espa\xF1ol", "Russian"],
+            SUPPORTED_LOCALES: ["en", "fr", "it", "de", "es", "ru"],
             LANGUAGE: "Lingua",
             LOGIN: "Accesso",
             STRING_ERROR_SERVER_ROOM_DISCONNECTED: "Disconnesso",
@@ -17369,8 +17322,8 @@ const VC = Et.View.extend({
         },
         de: {
             LANGUAGE_NAME: "Deutsche",
-            SUPPORTED_LANGUAGES: ["English", "Fran\xE7ais", "Italiano", "Deutsch", "Espa\xF1ol"],
-            SUPPORTED_LOCALES: ["en", "fr", "it", "de", "es"],
+            SUPPORTED_LANGUAGES: ["English", "Fran\xE7ais", "Italiano", "Deutsch", "Espa\xF1ol", "Russian"],
+            SUPPORTED_LOCALES: ["en", "fr", "it", "de", "es", "ru"],
             LANGUAGE: "Sprache",
             LOGIN: "Login",
             STRING_ERROR_SERVER_ROOM_DISCONNECTED: "Getrennt",
@@ -17378,12 +17331,21 @@ const VC = Et.View.extend({
         },
         es: {
             LANGUAGE_NAME: "Espa\xF1ol",
-            SUPPORTED_LANGUAGES: ["English", "Fran\xE7ais", "Italiano", "Deutsch", "Espa\xF1ol"],
-            SUPPORTED_LOCALES: ["en", "fr", "it", "de", "es"],
+            SUPPORTED_LANGUAGES: ["English", "Fran\xE7ais", "Italiano", "Deutsch", "Espa\xF1ol", "Russian"],
+            SUPPORTED_LOCALES: ["en", "fr", "it", "de", "es", "ru"],
             LANGUAGE: "idioma",
             LOGIN: "Iniciar sesi\xF3n",
             STRING_ERROR_SERVER_ROOM_DISCONNECTED: "Desconectado",
             STRING_ERROR_SERVER_ROOM_DESTROYED: "Desconectado"
+        },
+        ru: {
+            LANGUAGE_NAME:"Russian",
+            SUPPORTED_LANGUAGES: ["English", "Français", "Italiano", "Deutsch", "Español", "Русский"],
+            SUPPORTED_LOCALES: ["en", "fr", "it", "de", "es", "ru"],
+            LANGUAGE: "Язык",
+            LOGIN: "Логин",
+            STRING_ERROR_SERVER_ROOM_DISCONNECTED: "Отключено",
+            STRING_ERROR_SERVER_ROOM_DESTROYED: "Игра завершена, спасибо за игру!"
         }
     },
     UC = `<div id="player" class="playerTopBar">
@@ -17467,10 +17429,10 @@ const VC = Et.View.extend({
             announcePrompt: !1,
             countGroupName: null,
             strings: {
-                your_choice: "Thank you. Your choice: ",
-                censor_prompt: "Censor this?",
-                censor_confirm: "Yes, Censor!",
-                censor_cancel: "No!"
+                your_choice: "Спасибо. Ваш ответ: ",
+                censor_prompt: "Цензурируем?",
+                censor_confirm: "Так, убираем",
+                censor_cancel: "Не"
             }
         }
     }),
@@ -17550,13 +17512,13 @@ const VC = Et.View.extend({
             }), this.selected = [], this.listenTo(this.model, "change", this.update, this)
         },
         onBeforeDestroy() {
-            this.model.get("type") === "multiple" && this.onChildviewChildviewButtonSubmit()
+            this.model.get("type") === "multiple" && this.onChildviewChildviewButtonАдправіць()
         },
         update() {
             this.promptComponent.model.clear({
                 silent: !0
             }).set(this.model.get("prompt")), this.choicesList.options.block = this.model.get("block"), this.choicesList.collection.set(this.model.get("choices")), this.model.get("type") === "multiple" && at.all(this.model.get("choices"), t => !t.disabled) && this.choicesList.collection.push({
-                text: "Submit",
+                text: "Адправіць",
                 action: "submit",
                 block: !1
             }), this.model.get("isAudience") && ((this.model.get("choiceId") === void 0 || this.model.get("choiceId") !== this.getOption("choiceId")) && (this.selected = [], this.audienceChoice = void 0, this.votesLeft = void 0), this.selected.length > 0 && (this.model.get("type") === "multiple" ? this.choicesList.children.forEach(t => {
@@ -17588,9 +17550,9 @@ const VC = Et.View.extend({
                     }
                     return !1;
                 case "repeating":
-                    if (this.votesLeft === void 0 && (this.votesLeft = this.model.get("maxVotes")), this.delaySubmit || this.votesLeft <= 0 && this.model.get("isAudience")) return !1;
-                    this.delaySubmit = !0, window.setTimeout(() => {
-                        this.delaySubmit = !1
+                    if (this.votesLeft === void 0 && (this.votesLeft = this.model.get("maxVotes")), this.delayАдправіць || this.votesLeft <= 0 && this.model.get("isAudience")) return !1;
+                    this.delayАдправіць = !0, window.setTimeout(() => {
+                        this.delayАдправіць = !1
                     }, 101), this.votesLeft -= 1;
                     break;
                 case "single":
@@ -17609,7 +17571,7 @@ const VC = Et.View.extend({
             })), !1
         },
         displayAudienceChoice(t) {
-            let e = "Thank you.";
+            let e = "Спасибо.";
             const n = t.map(a => {
                 const d = this.choicesList.children.find(g => g.model.get("index") === a);
                 return d ? d.model.get("html") || d.model.get("text") : ""
@@ -17656,7 +17618,7 @@ const VC = Et.View.extend({
             }
             return !1
         },
-        onChildviewChildviewButtonSubmit() {
+        onChildviewChildviewButtonАдправіць() {
             let t = [];
             this.choicesList.children.forEach(n => {
                 n.model.get("selected") && t.push(n.getOption("index"))
@@ -19078,10 +19040,10 @@ const xx = `<div id="controller" class="state-controller controller-content">\r
             doneText: {},
             announcePrompt: !1,
             strings: {
-                your_choice: "Thank you. Your choice: ",
-                censor_prompt: "Censor this?",
-                censor_confirm: "Yes, Censor!",
-                censor_cancel: "No!"
+                your_choice: "Спасибо. Ваш ответ: ",
+                censor_prompt: "Цензурируем?",
+                censor_confirm: "Так, убираем",
+                censor_cancel: "Не"
             }
         }
     }),
@@ -19116,7 +19078,7 @@ const xx = `<div id="controller" class="state-controller controller-content">\r
         className: "SorterView",
         template: at.template(`
         <div id="rankedChoicesRegion"></div>
-        <div class="instructions">Choose where this item ranks:</div>
+        <div class="instructions">Выбери, куТак подходит этот элемент:</div>
         <div id="unrankedChoicesRegion"></div>
         <div id="lockInRegion"></div>
     `),
@@ -19162,7 +19124,7 @@ const xx = `<div id="controller" class="state-controller controller-content">\r
                 block: !1,
                 model: new ot.Model({
                     action: "lock",
-                    html: "Lock In"
+                    html: "Зафиксировать"
                 })
             }), this.listenTo(this.model, "change:choices", this.update, this)
         },
@@ -19320,29 +19282,29 @@ const xx = `<div id="controller" class="state-controller controller-content">\r
             text: "",
             validActions: [],
             strings: {
-                tos_warning: "By sharing content, you agree to our Terms of service",
-                tos_warning_agree: "agree and share",
-                tos_warning_back: "back to menu",
-                create_new_episode: "create a new episode",
-                create_new_name_prompt: "first things first, enter a name for the episode that will contain all your prompts and hit create.",
-                create_new_button: "create",
-                button_back_to_episodes: "back to episodes",
-                button_back_to_menu: "back to menu",
-                previous_episodes: "previous episodes:",
-                toggle_prompts_prompt: "tap to show/hide prompts",
-                button_close: "close",
-                button_done: "done",
-                button_add: "add prompt",
-                input_placeholder: "enter a prompt",
-                label_hidden: "hidden",
-                button_edit: "edit",
-                button_save: "save",
-                button_publish: "publish",
-                button_play: "play",
-                button_delete: "delete",
-                delete_warning: "Are you sure you want to delete this episode?",
-                delete_warning_confirm: "Yes",
-                delete_warning_cancel: "No"
+                tos_warning: "Делясь контентом, ты соглашаешься с Условиями использования",
+                tos_warning_agree: "Согласиться и поделиться",
+                tos_warning_back: "Вернуться в меню",
+                create_new_episode: "СозТакть новый эпизод",
+                create_new_name_prompt: "Для начала введи название эпизоТак, который будет содержать твои заТакния, и нажми СозТакть.",
+                create_new_button: "СозТакть",
+                button_back_to_episodes: "Вернуться к эпизоТакм",
+                button_back_to_menu: "Вернуться в меню",
+                previous_episodes: "Предыдущие эпизоды:",
+                toggle_prompts_prompt: "Показать/скрыть заТакния",
+                button_close: "Закрыть",
+                button_done: "Готово",
+                button_add: "Добавить заТакние",
+                input_placeholder: "введи заТакние",
+                label_hidden: "скрыто",
+                button_edit: "РеТакктировать",
+                button_save: "Сохранить",
+                button_publish: "Опубликовать",
+                button_play: "Играть",
+                button_delete: "УТаклить",
+                delete_warning: "УТаклить этот эпизод?",
+                delete_warning_confirm: "Так",
+                delete_warning_cancel: "Не"
             }
         }
     }),
@@ -19569,14 +19531,14 @@ const xx = `<div id="controller" class="state-controller controller-content">\r
                 collection: new ot.Collection
             }), this.inputComponent = this.inputComponent || new to({
                 model: new ot.Model({
-                    inlineSubmit: !0,
-                    inlineSubmitText: "",
+                    inlineАдправіць: !0,
+                    inlineАдправіцьText: "",
                     className: "addPrompt",
                     counter: !0
                 })
             }), this.titleInputComponent = this.titleInputComponent || new to({
                 model: new ot.Model({
-                    inlineSubmit: !0,
+                    inlineАдправіць: !0,
                     counter: !0
                 })
             }), this.promptsList = this.promptsList || new pi({
@@ -19601,7 +19563,7 @@ const xx = `<div id="controller" class="state-controller controller-content">\r
                     html: a
                 }
             });
-            this.episodesList.collection.set(e), this.inputComponent.model.set("maxLength", this.model.get("maxContentLength")), this.inputComponent.model.set("inlineSubmitText", this.model.get("strings").button_add), this.titleInputComponent.model.set("maxLength", this.model.get("maxTitleLength")), this.titleInputComponent.model.set("inlineSubmitText", this.model.get("strings").create_new_button), this.promptsList.collection.set(this.model.get("prompts").map(n => {
+            this.episodesList.collection.set(e), this.inputComponent.model.set("maxLength", this.model.get("maxContentLength")), this.inputComponent.model.set("inlineАдправіцьText", this.model.get("strings").button_add), this.titleInputComponent.model.set("maxLength", this.model.get("maxTitleLength")), this.titleInputComponent.model.set("inlineАдправіцьText", this.model.get("strings").create_new_button), this.promptsList.collection.set(this.model.get("prompts").map(n => {
                 const i = at.extend({}, n);
                 i.text = nn.htmlUnescape(n.text);
                 let a = n.author !== this.client.userId ? "other" : "self";
@@ -19616,7 +19578,7 @@ const xx = `<div id="controller" class="state-controller controller-content">\r
                 action: "new"
             })
         },
-        onChildviewInputSubmit() {
+        onChildviewInputАдправіць() {
             let t, e;
             this.model.get("validActions").indexOf("add") !== -1 ? (t = "add", e = this.inputComponent.getSanitizedValue(), this.inputComponent.clearInput(), this.inputComponent.focus()) : this.model.get("validActions").indexOf("title") !== -1 && (t = "title", e = this.titleInputComponent.getValue(), this.titleInputComponent.clearInput()), !(!t || !e) && this.triggerMethod("client:message", {
                 action: t,
@@ -20313,7 +20275,7 @@ Et.View.extend({
         }
     },
     initialize(t) {
-        this.mergeOptions(t, ["appId", "appTag"]), this.locale = "en", this.client = t.client, this.playerTopBar = this.playerTopBar || new WC, this.onEntityDidChangeWithContext = this.onEntityDidChange.bind(this), this.onTextDescriptionsWithContext = this.onTextDescriptions.bind(this), this.onRoomWasDestroyedWithContext = this.onRoomWasDestroyed.bind(this), this.onDisconnectedWithContext = this.onDisconnected.bind(this), this.onConnectionMessageWithContext = this.onConnectionMessage.bind(this), t.client.on("client:entityDidChange", this.onEntityDidChangeWithContext), t.client.on("client:textDescriptions", this.onTextDescriptionsWithContext), t.client.on("client:roomWasDestroyed", this.onRoomWasDestroyedWithContext), t.client.on("client:disconnected", this.onDisconnectedWithContext), t.client.on("client:connection", this.onConnectionMessageWithContext), this.model = new ot.Model({});
+        this.mergeOptions(t, ["appId", "appTag"]), this.locale = "ru", this.client = t.client, this.playerTopBar = this.playerTopBar || new WC, this.onEntityDidChangeWithContext = this.onEntityDidChange.bind(this), this.onTextDescriptionsWithContext = this.onTextDescriptions.bind(this), this.onRoomWasDestroyedWithContext = this.onRoomWasDestroyed.bind(this), this.onDisconnectedWithContext = this.onDisconnected.bind(this), this.onConnectionMessageWithContext = this.onConnectionMessage.bind(this), t.client.on("client:entityDidChange", this.onEntityDidChangeWithContext), t.client.on("client:textDescriptions", this.onTextDescriptionsWithContext), t.client.on("client:roomWasDestroyed", this.onRoomWasDestroyedWithContext), t.client.on("client:disconnected", this.onDisconnectedWithContext), t.client.on("client:connection", this.onConnectionMessageWithContext), this.model = new ot.Model({});
         const e = t.client.parseEntities();
         this.model.set(e), this.model.on({
             "change:player": this.setBlob,
@@ -20418,8 +20380,8 @@ Et.View.extend({
             </div>`;
         e += `
             <div class='success'>
-                You have successfully connected your account to the Jackbox Audience Kit Twitch Extension.
-            </div>`, this.lacksAudience ? e += "<div class='warning'>THIS GAME DOESN'T HAVE AN AUDIENCE FEATURE</div>" : this.client.roomInfo.audienceEnabled || (e += "<div class='warning'>THIS ROOM DOESN'T HAVE THE AUDIENCE SETTING ENABLED</div>"), kt.show("custom", {
+                Вы паспяхова падлучаныя Так Jackbox Audience Kit Twitch Extension.
+            </div>`, this.lacksAudience ? e += "<div class='warning'>У ГЭТАЙ ГУЛЬНІ НЕ ФУНКЦЫІ ГЛЯТакЧОЎ</div>" : this.client.roomInfo.audienceEnabled || (e += "<div class='warning'>У ГЭТАЙ ГУЛЬНІ НЕ ФУНКЦЫІ ГЛЕТакЧОЎ</div>"), kt.show("custom", {
             html: e,
             position: "bottom",
             timer: t,
@@ -21094,11 +21056,17 @@ const Bx = Et.View.extend({
             height: 0
         }), this.parentSelector = "#jbg-grid-main", this.getDataFn = function() {
             return null
-        }, this.generate = function() {
+        }, this.translateLetters = function(s) {
+            let e = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            let r = "АВСДЕБЖНЬЧКГМИОРЦЯЗТПЛШХУЫ";
+            let a = r[e.indexOf(s)];
+            return (a==undefined) ? s : a.toString()
+        },
+        this.generate = function() {
             let i = '<table class="jbg-grid">';
             for (let d = 0; d < e.numRows; d++) {
                 i += '<tr class="jbg-grid-row">';
-                for (let g = 0; g < e.numCols; g++) i += `<td class="jbg-grid-cell coord-${d}-${g}" data-r="${d}" data-c="${g}" >`, i += `<span class="jbg-grid-text coord-${d}-${g}">${e.getDataFn(d,g)}</span>`, i += "</td>";
+                for (let g = 0; g < e.numCols; g++) i += `<td class="jbg-grid-cell coord-${d}-${g}" data-r="${d}" data-c="${g}" >`, i += `<span class="jbg-grid-text coord-${d}-${g}">${e.translateLetters(e.getDataFn(d,g))}</span>`, i += "</td>";
                 i += "</tr>"
             }
             i += "</table>", se(e.parentSelector).html(i), se(".jbg-grid-cell").css({
@@ -21148,10 +21116,10 @@ const Bx = Et.View.extend({
             <div class="container">\r
                 <br /><span id="lobby-text"></span><br />\r
                 <form class="pure-form">                    \r
-                    <button type="button" id="button-startgame" class="light-text button-game button-xlarge pure-button pure-input-1">EVERYBODY'S IN</button>\r
-                    <button type="button" id="button-stopcountdown" class="light-text button-game  button-xlarge pure-button pure-input-1">CANCEL</button>\r
-                    <button type="button" id="button-sameplayers" class="light-text button-game  button-xlarge pure-button pure-input-1 button-endbuttons">same players</button>\r
-                    <button type="button" id="button-newplayers" class="light-text button-game  button-xlarge pure-button pure-input-1 button-endbuttons">new players</button>    \r
+                    <button type="button" id="button-startgame" class="light-text button-game button-xlarge pure-button pure-input-1">ВСЕ ЗДЕСЬ</button>\r
+                    <button type="button" id="button-stopcountdown" class="light-text button-game  button-xlarge pure-button pure-input-1">ОТМЕНА</button>\r
+                    <button type="button" id="button-sameplayers" class="light-text button-game  button-xlarge pure-button pure-input-1 button-endbuttons">Те же игроки</button>\r
+                    <button type="button" id="button-newplayers" class="light-text button-game  button-xlarge pure-button pure-input-1 button-endbuttons">Новые игроки</button>    \r
                 </form>\r
             </div>\r
         </div>\r
@@ -21170,7 +21138,7 @@ const Bx = Et.View.extend({
                 <div id="make-many-choices-sub-text" class="white-text" style="width:100%; text-align:center;" ></div>\r
                 <div id="make-many-choices-choices" class="row light-text" style="width:100%;" ></div>\r
                 <div id="make-many-choices-submit-button-container" style="width:100%; display:table;" >\r
-                    <button type="button" id="make-many-choices-submit-button" class="light-text button-game button-xlarge pure-button pure-input-1">SUBMIT</button>\r
+                    <button type="button" id="make-many-choices-submit-button" class="light-text button-game button-xlarge pure-button pure-input-1">Адправіць</button>\r
                 </div>\r
             </div>\r
         </div>\r
@@ -21182,9 +21150,9 @@ const Bx = Et.View.extend({
                 <div id="enter-single-text-input-container" class="container">\r
                     <form class="pure-form" id="enter-single-text-field">\r
                         <div class="pure-u-1">\r
-                            <input id="enter-single-text-input" name="enter-single-text-input-field" class="pure-input-1 capitalize" type="text" maxlength="45" placeholder="ENTER HERE" autocapitalize="off" autocorrect="off" autocomplete="off">\r
+                            <input id="enter-single-text-input" name="enter-single-text-input-field" class="pure-input-1 capitalize" type="text" maxlength="45" placeholder="ПИШИ ЗДЕСЬ" autocapitalize="off" autocorrect="off" autocomplete="off">\r
                         </div>\r
-                        <button type="submit" id="enter-single-text-submit" class="light-text button-game button-large pure-button capitalize right"><i class="fas fa-paper-plane"></i>&nbsp;&nbsp;SEND</button>\r
+                        <button type="submit" id="enter-single-text-submit" class="light-text button-game button-large pure-button capitalize right"><i class="fas fa-paper-plane"></i>&nbsp;&nbsp;Адправіць</button>\r
                     </form>\r
                 </div>\r
             </div>\r
@@ -21194,11 +21162,11 @@ const Bx = Et.View.extend({
             <div id="enter-single-drawing-text-container" class="white-background">Lorem Ipsum</div>\r
 \r
             <canvas id="sketchpad" class="sketchpad" width='240' height='320' style='background-color:white;'>\r
-                Sorry, your browser is not supported.\r
+                Ошибка: ваш браузер не поддерживается.\r
             </canvas>\r
             \r
             <form id="enter-single-drawing-submit-container" class="pure-form container">\r
-                <button type="submit" id="enter-single-drawing-submit" class="light-text submit-drawing button-game button-large pure-button pure-input-1" style="margin-top: 0px;"><i class="fas fa-paper-plane"></i>&nbsp;&nbsp;send</button>\r
+                <button type="submit" id="enter-single-drawing-submit" class="light-text submit-drawing button-game button-large pure-button pure-input-1" style="margin-top: 0px;"><i class="fas fa-paper-plane"></i>&nbsp;&nbsp;Адправіць</button>\r
             </form>\r
         </div>\r
         \r
@@ -21240,7 +21208,7 @@ const Gx = VC.extend({
     },
     setupWithDollInfo(t) {
         t || (this.lastDollInfo ? t = this.lastDollInfo : t = {
-            name: "None",
+            name: "Не",
             controllerColors: {
                 dark: "#AAAAAA",
                 light: "#CCCCCC"
@@ -21260,9 +21228,9 @@ const Gx = VC.extend({
                 for (let E = 0; E < t.players.length; E++) t.players[E].id === this.client.userId && (a = t.players[E]);
                 const d = e ? e.state : "";
                 if (a) {
-                    if (n += `<p>${a.wonGame?"CONGRATULATIONS":"SUCH A TRAGEDY!"}</p>`, d === "MakeSingleChoice")
+                    if (n += `<p>${a.wonGame?"ВІНШУЮ":"ЯКІ ЖАХ!"}</p>`, d === "MakeSingleChoice")
                         for (let E = 0; E < e.choices.length; E++) n += `<button data-choice="${E}" class="light-text button-choice button-game button-large btn btn-block">${e.choices[E].text}</button>`;
-                    i += `<p>${a.wonGame?"You survived the game!":"You did not survive the game"}</p>`, i += "<BR>", i += `<p>Your final score: $${a.score}</p>`
+                    i += `<p>${a.wonGame?"Ты выжыў у гульні!":"Ты не выжыў у гульні"}</p>`, i += "<BR>", i += `<p>Твой выніковы счёт: $${a.score}</p>`
                 }
                 const g = this.model.get("room").artifact;
                 if (g && g.success && g.rootId) {
@@ -21279,7 +21247,7 @@ const Gx = VC.extend({
             } else {
                 let a = 0;
                 for (let g = 0; g < t.players.length; g++) t.players[g].wonGame && (a = t.players[g].score);
-                t.audience && (n += `<p>${t.audience.survived?"CONGRATULATIONS":"SUCH A TRAGEDY!"}</p>`, i += `<p>${t.audience.survived?"The audience has SURVIVED!":"The audience has DIED, and so have you!"}</p>`, i += "<BR>", i += `<p>${t.audience.count} audience ${t.audience.count===1?"member":"members"} got : $${t.audience.score}</p>`, i += "<BR>", i += `<p>Score to beat : $${a}</p>`);
+                t.audience && (n += `<p>${t.audience.survived?"ВІНШУЮ":"ЯКІ ЖАХ!"}</p>`, i += `<p>${t.audience.survived?"ГлеТакчы Выжылі!":"ГлеТакчы ЗДОХЛІ, і ты таксама!"}</p>`, i += "<BR>", i += `<p>${t.audience.count} ${t.audience.count===1?" гляТакч набраў":" глеТакчоў набралі"}  : $${t.audience.score}</p>`, i += "<BR>", i += `<p>Твоей целью были : $${a}</p>`);
                 const d = this.model.get("room").artifact;
                 if (d && d.success && d.rootId) {
                     let g = "games.jackbox.tv";
@@ -21314,7 +21282,7 @@ const Gx = VC.extend({
             n = e ? e.state : "",
             i = t ? t.state : "";
         if (this.grid && i !== "Gameplay" && n !== "Grid" && (this.grid.reset(), this.grid = null), n === "RoomFull") {
-            kt.show(Error("The room is full"), {
+            kt.show(Error("Склеп запоўнены!"), {
                 willClose: () => {
                     window.location.reload(!0)
                 }
@@ -21322,7 +21290,7 @@ const Gx = VC.extend({
             return
         }
         if (n === "GameLocked") {
-            kt.show(Error("Game is in progress. Please wait for a new game to start."), {
+            kt.show(Error("У маім склепе ўжо Такстаткова будучых мерцвякоў. Зайдзі пазней."), {
                 willClose: () => {
                     window.location.reload(!0)
                 }
@@ -21331,11 +21299,11 @@ const Gx = VC.extend({
         }
         if (i === "Lobby") {
             if (this.hideLobbyButtons(), !e.isAllowedToStartGame) {
-                se("#lobby-text").html("Sit back and relax!"), this.showScreen("#state-lobby"), this.setupWithDollInfo(e.dollInfo);
+                se("#lobby-text").html("Адкінься на спінку крэсла і адпачні!"), this.showScreen("#state-lobby"), this.setupWithDollInfo(e.dollInfo);
                 return
             }
             const g = t.lobbyState;
-            g === "WaitingForMore" ? se("#lobby-text").html("Waiting for all players to join") : g === "CanStart" ? (se("#lobby-text").html("Press this button when everybody has joined"), se("#button-startgame").show()) : g === "Countdown" ? (se("#lobby-text").html("Press this button to cancel game start"), se("#button-stopcountdown").show()) : g === "PostGame" && (se("#lobby-text").html("What do you want to do?"), se(".button-endbuttons").show()), this.showScreen("#state-lobby")
+            g === "WaitingForMore" ? se("#lobby-text").html("Чакаем іншых гульцоў...") : g === "CanStart" ? (se("#lobby-text").html("Націсні гэтую кнопку, калі ўсе Таклучыліся"), se("#button-startgame").show()) : g === "Countdown" ? (se("#lobby-text").html("Націсні гэтую кнопку, каб адмяніць запуск"), se("#button-stopcountdown").show()) : g === "PostGame" && (se("#lobby-text").html("Што выбярэш?"), se(".button-endbuttons").show()), this.showScreen("#state-lobby")
         } else if (i === "Gameplay")
             if (n === "MakeSingleChoice") {
                 const g = e.chosen === null || e.chosen === void 0,
@@ -21344,26 +21312,26 @@ const Gx = VC.extend({
                 if (g) {
                     se("#make-single-choice-text").html(`<p>${E}</p>`);
                     let A = "";
-                    for (let D = 0; D < k.length; D++) A += `<button data-choice="${D}" class="${k[D].disabled?`background-finger background-finger-${D}`:""} light-text button-choice button-game button-large btn" ${k[D].disabled?"disabled":""}>${k[D].disabled?"&zwnj;":k[D].text}</button>`;
+                    for (let D = 0; D < k.length; D++) A += `<button data-choice="${D}" class="${k[D].disabled?`background-finger background-finger-${D}`:""} light-text button-choice button-game button-large btn" ${k[D].disabled?"disabled":""}>${k[D].disabled?"&zwnj;":(E === "Повтори последовательность, нажимая на кнопки ниже." ? k[D].text.replace("Orange", "Оранжевый").replace("Blue", "Синий").replace("Green", "Зелёный").replace("Gun", "Пистолет").replace("Knife", "Нож").replace("Hammer", "Молоток").replace("Grenade", "Граната") : k[D].text)}</button>`;
                     se("#make-single-choice-choices").html(A)
-                } else se("#make-single-choice-text").html("<p>Thanks.</p>"), se("#make-single-choice-choices").html("");
+                } else se("#make-single-choice-text").html("<p>Дзякуй.</p>"), se("#make-single-choice-choices").html("");
                 this.showScreen("#state-make-single-choice")
             } else if (n === "MakeManyChoices") {
             const g = e.chosen === null || e.chosen === void 0,
                 E = e.text,
                 k = e.choices;
             if (g) {
-                se("#make-many-choices-text").html(`<p id='many-text'>${E}</p>`), se("#make-many-choices-sub-text").html("<p id='many-sub-text'>Tap any items below that fit this category.</p>");
+                se("#make-many-choices-text").html(`<p id='many-text'>${E}</p>`), se("#make-many-choices-sub-text").html("<p id='many-sub-text'>Выбери элемент(ы), которые относятся к категории.</p>");
                 let A = "";
                 for (let D = 0; D < k.length; D++) A += '<div class="col-xs-10">', A += `<button data-choice="${D}" id="make-many-choices-button-${D}" class="light-text make-many-choices-button button-game button-large pure-button pure-input-1">${k[D].text}</button>`, A += '</div><div class="col-xs-2">', A += `<i data-choice="${D}" id="make-many-choices-checkbox-${D}" class="checkbox box-unchecked make-many-choices-checkbox"></i>`, A += "</div>";
                 se("#make-many-choices-choices").html(A), se("#make-many-choices-submit-button-container").show()
-            } else se("#make-many-choices-text").html("<p>Thanks.</p>"), se("#make-many-choices-sub-text").html(""), se("#make-many-choices-choices").html(""), se("#make-many-choices-submit-button-container").hide();
+            } else se("#make-many-choices-text").html("<p>Спасибо.</p>"), se("#make-many-choices-sub-text").html(""), se("#make-many-choices-choices").html(""), se("#make-many-choices-submit-button-container").hide();
             this.showScreen("#state-make-many-choices")
         } else if (n === "EnterSingleText") e.entry ? this.showScreen("#state-logo") : (e.error ? (se("#enter-single-text-error").html(`<p>${e.error}</p>`), se("#enter-single-text-error").show()) : se("#enter-single-text-error").hide(), this.activeScreen !== "#state-enter-single-text" && (se("#enter-single-text-input").val(""), se("#enter-single-text-input").prop("type", e.inputType), se("#enter-single-text-field").show(), se("#state-enter-single-text #enter-single-text-text-container").html(`<span class="container-text">${e.text}</span>`)), this.showScreen("#state-enter-single-text"));
         else if (n === "EnterSingleDrawing")
             if (e.entry) this.showScreen("#state-logo");
             else {
-                se("#enter-single-drawing-text-container").html(`<p>Please Draw :<br>${e.text}</p>`), this.showScreen("#state-enter-single-drawing");
+                se("#enter-single-drawing-text-container").html(`<p>Калі ласка, намалюй:<br>${e.text}</p>`), this.showScreen("#state-enter-single-drawing");
                 const g = this.$el.find("#sketchpad")[0],
                     E = g.getContext("2d"),
                     k = this.$el.find("#player").outerHeight() + this.$el.find("#enter-single-drawing-text-container").outerHeight() + this.$el.find("#enter-single-drawing-submit-container").outerHeight();
@@ -21381,11 +21349,16 @@ const Gx = VC.extend({
                             const v = V.getCell(G, Q);
                             J(G, Q) >= 0 ? (v.addClass(`${e.skin}-selected`), v.removeClass(`${e.skin}-unselected`)) : (v.addClass(`${e.skin}-unselected`), v.removeClass(`${e.skin}-selected`))
                         }
-                    if (e.showProgress) {
+                    if(e.showProgress){
+                        let a = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+                        let u = "АВСДЕБЖНЬЧКГМІОРЦЯЗТПЛШХУЫ";
                         let G = "";
-                        for (let Q = 0; Q < D.length; Q++) G += e.grid[D[Q].r][D[Q].c];
-                        se("#grid-submit").text(`Submit${G.length>0?` "${G}"`:""}`)
-                    } else se("#grid-submit").text("Submit");
+                        for(let Q = 0; Q < D.length; Q++){
+                            let ch = e.grid[D[Q].r][D[Q].c];
+                            G += (ch === "" || ch === undefined || a.indexOf(ch) === -1) ? ch : u[a.indexOf(ch)];
+                        }
+                        se("#grid-submit").text(`Адправіць${G.length>0?` "${G}"`:""}`)
+                    } else se("#grid-submit").text("Адправіць");
                     se("#grid-submit").data("entry", D)
                 };
             var a = J,
@@ -21451,7 +21424,7 @@ const Gx = VC.extend({
                 d += `<button data-choice="${g.key}" class="light-text button-choice button-game button-large pure-button pure-input-1">${g.text}</button>`
             }), se("#make-single-choice-choices").html(d), this.showScreen("#state-make-single-choice")
         } else if (a === "multiple") {
-            se("#make-many-choices-text").html(`<p>${n}</p>`), se("#make-many-choices-sub-text").html("<p>Tap the items below that fit into this category.</p>");
+            se("#make-many-choices-text").html(`<p>${n}</p>`), se("#make-many-choices-sub-text").html("<p>Выберыце элементы, якія адносяцца Так гэтай катэгорыі.</p>");
             let d = "";
             for (let g = 0; g < i.length; g++) d += '<div class="col-xs-10">', d += `<button data-choice="${g}" id="make-many-choices-button-${g}" class="light-text make-many-choices-button button-game button-large pure-button pure-input-1">${i[g].text}</button>`, d += '</div><div class="col-xs-2">', d += `<i data-choice="${g}" id="make-many-choices-checkbox-${g}" class="checkbox box-unchecked make-many-choices-checkbox"></i>`, d += "</div>";
             se("#make-many-choices-choices").html(d), se("#make-many-choices-submit-button-container").show(), this.showScreen("#state-make-many-choices")
@@ -21490,7 +21463,7 @@ const Gx = VC.extend({
         }) : (this.client.sessionSend("vote", "Trivia Death Vote", {
             type: "vote",
             vote: e
-        }), se("#make-single-choice-text").html("<p>Thanks. Now wait quietly.</p>"), se("#make-single-choice-choices").html("")), se(".button-choice").removeClass("selected"), se(t.currentTarget).addClass("selected"), !1
+        }), se("#make-single-choice-text").html("<p>Дзякуй. Цяпер сядзі ціха і чакай.</p>"), se("#make-single-choice-choices").html("")), se(".button-choice").removeClass("selected"), se(t.currentTarget).addClass("selected"), !1
     },
     chooseManyChoices(t) {
         const e = se(t.currentTarget).data("choice"),
@@ -21523,7 +21496,7 @@ const Gx = VC.extend({
             this.client.sessionSend("vote", "Trivia Death Vote", {
                 type: "vote",
                 vote: n.join(",")
-            }), se("#make-many-choices-text").html("<p>Thanks.</p>"), se("#make-many-choices-sub-text").html(""), se("#make-many-choices-choices").html(""), se("#make-many-choices-submit-button-container").hide()
+            }), se("#make-many-choices-text").html("<p>Дзякуй.</p>"), se("#make-many-choices-sub-text").html(""), se("#make-many-choices-choices").html(""), se("#make-many-choices-submit-button-container").hide()
         }
     },
     submitEnterSingleText() {
@@ -21546,7 +21519,7 @@ const Gx = VC.extend({
         }), !1
     },
     sanitize(t) {
-        return t.replace(/[^A-Z0-9\u00A1\u0020-\u002F\u00BF-\u00FF!?*$+\-’'_ .,:]/gi, "").replace(/'/g, "\u2019").trim()
+        return t.replace(/[^A-Z0-9\u00A1\u0020-\u002F\u00BF-\u00FF\u0406-\u0408\u0410-\u044F\u0401\u0451\u0456-\u0458!?*$+\-’'_ .,:]/gi, "").replace(/'/g, "\u2019").trim()
     },
     onResize() {
         const t = se(window).width(),
