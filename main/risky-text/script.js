@@ -12969,7 +12969,7 @@ ${r.message}`,
         }
         static html(e) {
             if (String(e).match(/<fart>/g)) {
-                const n = new Audio(new URL("main/pp10/risky-text/assets/4af6cbea.wav", self.location).href);
+                const n = new Audio(new URL("main/risky-text/assets/4af6cbea.wav", self.location).href);
                 n.volume = .1, n.play()
             }
             const r = /<(?:"[^"]*"['"]*|'[^']*'['"]*|[^'">])+>/g;
@@ -21083,11 +21083,11 @@ function print() { __p += __j.call(arguments, '') }
                 }
             }
         }),
-        aI = "main/pp10/risky-text/assets/ad9172fc.png",
-        lI = "main/pp10/risky-text/assets/dc131b16.png",
-        Bte = "main/pp10/risky-text/assets/38715b18.png",
-        jte = "main/pp10/risky-text/assets/b0d7c822.png",
-        qte = "main/pp10/risky-text/assets/06150f24.png",
+        aI = "main/risky-text/assets/ad9172fc.png",
+        lI = "main/risky-text/assets/dc131b16.png",
+        Bte = "main/risky-text/assets/38715b18.png",
+        jte = "main/risky-text/assets/b0d7c822.png",
+        qte = "main/risky-text/assets/06150f24.png",
         pi = t => (cc("data-v-2c53389f"), t = t(), fc(), t),
         Gte = {
             class: "jbg"
@@ -24320,9 +24320,9 @@ ${e}`
                 dismissText: String
             }
         }),
-        Tse = "main/pp10/risky-text/assets/928ef0da.png",
-        Ose = "main/pp10/risky-text/assets/0bb76a2d.png",
-        Ase = "main/pp10/risky-text/assets/ed4469b3.png",
+        Tse = "main/risky-text/assets/928ef0da.png",
+        Ose = "main/risky-text/assets/0bb76a2d.png",
+        Ase = "main/risky-text/assets/ed4469b3.png",
         kse = {
             key: 0,
             class: "image",
@@ -27414,7 +27414,7 @@ ${e}`
                 }
             }
         }),
-        Ale = "main/pp10/risky-text/assets/c8afd972.svg",
+        Ale = "main/risky-text/assets/c8afd972.svg",
         kle = {
             class: "constrain"
         },
@@ -28004,7 +28004,7 @@ ${e}`
                 }
             }
         }),
-        Cue = "main/pp10/risky-text/assets/9b2dfd47.svg",
+        Cue = "main/risky-text/assets/9b2dfd47.svg",
         Nue = {
             class: "message"
         },
@@ -28050,7 +28050,7 @@ ${e}`
                 }
             }
         }),
-        Mue = "main/pp10/risky-text/assets/c7bd8c58.svg",
+        Mue = "main/risky-text/assets/c7bd8c58.svg",
         Uue = {
             class: "waiting"
         },
@@ -28116,28 +28116,28 @@ ${e}`
                     mouth: this.player.face.mouth,
                     avatars: [{
                         alt: this.$t("ALT.AVATARS.GENERIC"),
-                        src: new URL("main/pp10/risky-text/assets/7cf7de1f.svg", self.location).href
+                        src: new URL("main/risky-text/assets/7cf7de1f.svg", self.location).href
                     }, {
                         alt: this.$t("ALT.AVATARS.GENERIC"),
-                        src: new URL("main/pp10/risky-text/assets/fb0bdaa2.svg", self.location).href
+                        src: new URL("main/risky-text/assets/fb0bdaa2.svg", self.location).href
                     }, {
                         alt: this.$t("ALT.AVATARS.GENERIC"),
-                        src: new URL("main/pp10/risky-text/assets/bfb3b91d.svg", self.location).href
+                        src: new URL("main/risky-text/assets/bfb3b91d.svg", self.location).href
                     }, {
                         alt: this.$t("ALT.AVATARS.GENERIC"),
-                        src: new URL("main/pp10/risky-text/assets/7c1a4c8f.svg", self.location).href
+                        src: new URL("main/risky-text/assets/7c1a4c8f.svg", self.location).href
                     }, {
                         alt: this.$t("ALT.AVATARS.GENERIC"),
-                        src: new URL("main/pp10/risky-text/assets/e2418d58.svg", self.location).href
+                        src: new URL("main/risky-text/assets/e2418d58.svg", self.location).href
                     }, {
                         alt: this.$t("ALT.AVATARS.GENERIC"),
-                        src: new URL("main/pp10/risky-text/assets/18e87d8f.svg", self.location).href
+                        src: new URL("main/risky-text/assets/18e87d8f.svg", self.location).href
                     }, {
                         alt: this.$t("ALT.AVATARS.GENERIC"),
-                        src: new URL("main/pp10/risky-text/assets/2d8179cb.svg", self.location).href
+                        src: new URL("main/risky-text/assets/2d8179cb.svg", self.location).href
                     }, {
                         alt: this.$t("ALT.AVATARS.GENERIC"),
-                        src: new URL("main/pp10/risky-text/assets/18443f16.svg", self.location).href
+                        src: new URL("main/risky-text/assets/18443f16.svg", self.location).href
                     }]
                 }
             },
@@ -28212,7 +28212,7 @@ ${e}`
                 }
             }
         }),
-        zue = "main/pp10/risky-text/assets/3bc5e9e1.svg",
+        zue = "main/risky-text/assets/3bc5e9e1.svg",
         Yue = {
             class: "lobby"
         },
@@ -28324,7 +28324,7 @@ ${e}`
                 }
             }
         }),
-        sC = "main/pp10/risky-text/assets/97133b1e.svg",
+        sC = "main/risky-text/assets/97133b1e.svg",
         sce = t => (cc("data-v-7c34a23f"), t = t(), fc(), t),
         ace = {
             class: "favorites"
@@ -42072,7 +42072,7 @@ ${e}`
                                         _ = document.createTextNode("aa"),
                                         E = document.createTextNode("aa"),
                                         v = document.createElement("img");
-                                    v.setAttribute("src", "main/pp10/risky-text/assets/3b7b8a4b.gif");
+                                    v.setAttribute("src", "main/risky-text/assets/3b7b8a4b.gif");
                                     var S = document.createRange();
                                     if (d = {}, T.appendChild(_), T.appendChild(y), y.appendChild(v), y.appendChild(E), document.body.appendChild(T), S.setStart(_, 1), S.setEnd(y, 0), d.getClientRects = d.getBoundingClientRect = S.getClientRects().length > 1, d.getClientRects || (S.setEnd(E, 1), d.getClientRects = d.getBoundingClientRect = S.getClientRects().length === 2), !d.getBoundingClientRect) {
                                         S.setEnd(S.startContainer, S.startOffset);
@@ -43973,9 +43973,9 @@ ${e}`
                 }
             }
         }),
-        _de = "main/pp10/risky-text/assets/fb6353b5.svg",
-        bde = "main/pp10/risky-text/assets/e8e30b03.svg",
-        pT = "main/pp10/risky-text/assets/30b1af61.svg",
+        _de = "main/risky-text/assets/fb6353b5.svg",
+        bde = "main/risky-text/assets/e8e30b03.svg",
+        pT = "main/risky-text/assets/30b1af61.svg",
         Ede = {
             class: "typing"
         },
