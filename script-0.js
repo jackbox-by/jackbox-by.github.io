@@ -4931,6 +4931,15 @@ var ow = Qo((uw, Fo) => {
             directory: "pp9/lineup",
             features: ["kicking"],
             categoryId: "LineupGame"
+        },{
+            name: "Тэкстапраў",
+            tag: "risky-text",
+            wrapper: "vue",
+            isPublic: !0,
+            directory: "risky-text",
+            features: ["moderation", "kicking"],
+            shopItems: [],
+            categoryId: "RiskyTextGame"
         }],
         Ki = t => jg.find(e => e.tag === t || e.categoryId === t);
 
@@ -10887,7 +10896,14 @@ Url: ${nr(t)}`), !0)
                         css: ["assets/style-0.css"],
                         base: "main/pp9/range-game",
                         version: "5.0.0"
-                    }
+                    },
+		    {
+			"risky-text": {
+                        file: "script.js",
+                        css: ["assets/style-0.css"],
+                        base: "main/risky-text",
+                        version: "5.247.119"
+                    },
                 }
             }
         },
