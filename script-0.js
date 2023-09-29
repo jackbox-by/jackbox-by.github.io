@@ -10897,8 +10897,7 @@ Url: ${nr(t)}`), !0)
                         base: "main/pp9/range-game",
                         version: "5.0.0"
                     },
-		    {
-			"risky-text": {
+		    "risky-text": {
                         file: "script.js",
                         css: ["assets/style-0.css"],
                         base: "main/risky-text",
